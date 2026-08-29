@@ -310,6 +310,8 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
+  // l'admin va sempre preso dalla rete (mai stantio, il token cifrato nemmeno)
+  if (new URL(e.request.url).pathname.includes("/admin/")) return;
   e.respondWith(
     caches.match(e.request).then((cached) => {
       const fresh = fetch(e.request)
@@ -344,6 +346,9 @@ fs.cpSync(path.join(ROOT, "assets"), path.join(DIST, "assets"), { recursive: tru
 // pannello admin online (salva su GitHub tramite API)
 fs.mkdirSync(path.join(DIST, "admin"), { recursive: true });
 fs.copyFileSync(path.join(ROOT, "admin", "index.html"), path.join(DIST, "admin", "index.html"));
+// token cifrato per l'accesso con password (creato da imposta-password.js)
+const segreto = path.join(ROOT, "admin", "segreto.json");
+if (fs.existsSync(segreto)) fs.copyFileSync(segreto, path.join(DIST, "admin", "segreto.json"));
 
 const written = [];
 function write(name, html) {

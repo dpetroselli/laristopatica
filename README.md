@@ -23,21 +23,32 @@ telefono (PWA).
 ### Admin online (consigliato)
 
 Il pannello è pubblicato insieme al sito: **https://dpetroselli.github.io/laristopatica/admin/**
-(funziona da qualsiasi computer o tablet). Alla prima apertura chiede una «chiave di
-accesso» GitHub; una volta inserita la ricorda nel browser. Ogni «Salva e pubblica»
-scrive `content.json` nel repository e **il sito si aggiorna da solo in 1-2 minuti**.
+(funziona da qualsiasi computer o tablet). Michela entra con una **semplice password**,
+che il browser ricorda. Ogni «Salva e pubblica» scrive `content.json` nel repository e
+**il sito si aggiorna da solo in 1-2 minuti**.
 
-Per creare la chiave (una volta sola, ~2 minuti):
+#### Impostare (o cambiare) la password — lo fa chi gestisce il repo, una volta sola
 
-1. Serve un account GitHub. Se è quello di Michela, prima va aggiunta come collaboratrice:
-   repo → Settings → Collaborators → Add people (lei accetta l'invito via mail).
-2. Dal suo account: https://github.com/settings/personal-access-tokens → **Generate new token**
+1. Crea un token GitHub: https://github.com/settings/personal-access-tokens → **Generate new token**
    - Nome: `admin ristopatica` — Scadenza: la massima disponibile
    - Repository access: **Only select repositories** → `dpetroselli/laristopatica`
    - Permissions → Repository permissions → **Contents: Read and write**
-3. Genera, copia la chiave (`github_pat_…`) e incollala nella schermata di accesso dell'admin.
+2. Nel terminale, dentro la cartella del progetto:
 
-Quando la chiave scade, se ne genera una nuova allo stesso modo.
+```bash
+node imposta-password.js
+```
+
+   Ti chiede il token e la password da dare a Michela, e salva il token **cifrato**
+   in `admin/segreto.json` (AES-256-GCM con chiave derivata dalla password: il file è
+   sicuro da pubblicare).
+3. Pubblica: `git add admin/segreto.json && git commit -m "Password admin" && git push`
+4. Comunica la password a Michela (a voce o in chat privata, non via commit!).
+
+Note di sicurezza: il token cifrato è nel repo pubblico, quindi la password deve essere
+decente — una frase (es. «supplì alle 11 di sera») è perfetta, `michela123` no. Quando
+il token scade, ripeti i passaggi; per cambiare password basta rilanciare lo script.
+Senza `segreto.json` la schermata di accesso chiede direttamente il token (ripiego).
 
 ### Admin locale (alternativa)
 

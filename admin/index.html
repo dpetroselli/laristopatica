@@ -132,9 +132,8 @@ textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
   <div class="login-box">
     <img src="../assets/img/logo.png" alt="">
     <h1>Admin La Ristopatica</h1>
-    <p>Ciao! Per salvare le modifiche sul sito serve la tua <strong>chiave di accesso GitHub</strong>
-    (te la fornisce chi gestisce il sito — è come una password dedicata, incollala qui una volta sola).</p>
-    <input type="password" id="token-input" placeholder="Incolla qui la chiave (github_pat_… o ghp_…)">
+    <p id="login-text">Ciao! Inserisci la password per entrare (la ricordo su questo dispositivo).</p>
+    <input type="password" id="token-input" placeholder="Password">
     <button class="btn" id="token-save">Entra</button>
     <span class="status" id="login-status"></span>
   </div>
@@ -525,6 +524,7 @@ async function save() {
 async function start() {
   $("#preview-link").href = PREVIEW;
   if (!LOCAL && !getToken()) {
+    await loadSecret();
     $("#login").hidden = false;
     return;
   }
@@ -534,8 +534,9 @@ async function start() {
     if (!LOCAL) {
       // chiave scaduta o revocata: torna al login
       localStorage.removeItem(tokenKey);
+      await loadSecret();
       $("#login").hidden = false;
-      $("#login-status").textContent = "Accesso scaduto o non valido: incolla di nuovo la chiave.";
+      $("#login-status").textContent = "Accesso scaduto o non valido: entra di nuovo.";
       $("#login-status").className = "status err";
       return;
     }
@@ -547,19 +548,56 @@ async function start() {
   renderSidebar(); renderEditor();
 }
 
+// Se esiste admin/segreto.json l'accesso è con password (il token GitHub è lì
+// dentro, cifrato); altrimenti si incolla direttamente il token.
+let secretBlob = null;
+async function loadSecret() {
+  try {
+    const r = await fetch("segreto.json", { cache: "no-store" });
+    if (r.ok) secretBlob = await r.json();
+  } catch {}
+  if (!secretBlob) {
+    $("#login-text").innerHTML = "Ciao! Per salvare le modifiche serve la <strong>chiave di accesso GitHub</strong> (te la fornisce chi gestisce il sito — incollala qui una volta sola).";
+    $("#token-input").placeholder = "Incolla qui la chiave (github_pat_… o ghp_…)";
+  }
+}
+
+const b64ToBytes = (b64) => Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+async function decryptToken(password) {
+  const material = await crypto.subtle.importKey("raw", new TextEncoder().encode(password), "PBKDF2", false, ["deriveKey"]);
+  const key = await crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: b64ToBytes(secretBlob.salt), iterations: secretBlob.iter, hash: "SHA-256" },
+    material, { name: "AES-GCM", length: 256 }, false, ["decrypt"]
+  );
+  const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64ToBytes(secretBlob.iv) }, key, b64ToBytes(secretBlob.data));
+  return new TextDecoder().decode(plain);
+}
+
 $("#token-save").addEventListener("click", async () => {
-  const t = $("#token-input").value.trim();
+  const input = $("#token-input").value.trim();
   const ls = $("#login-status");
-  if (!t) { ls.textContent = "Incolla la chiave nel campo qui sopra."; ls.className = "status err"; return; }
-  localStorage.setItem(tokenKey, t);
+  if (!input) { ls.textContent = "Scrivi la password nel campo qui sopra."; ls.className = "status err"; return; }
   ls.textContent = "Verifica in corso…"; ls.className = "status";
+  let token = input;
+  if (secretBlob) {
+    try {
+      token = await decryptToken(input);
+    } catch {
+      ls.textContent = "Password sbagliata. Riprova.";
+      ls.className = "status err";
+      return;
+    }
+  }
+  localStorage.setItem(tokenKey, token);
   try {
     await loadContent();
     $("#login").hidden = true;
     renderSidebar(); renderEditor();
   } catch (e) {
     localStorage.removeItem(tokenKey);
-    ls.textContent = "Chiave non valida o senza accesso al sito. Ricontrolla e riprova.";
+    ls.textContent = secretBlob
+      ? "Password giusta, ma l'accesso a GitHub non funziona (chiave scaduta?). Avvisa chi gestisce il sito."
+      : "Chiave non valida o senza accesso al sito. Ricontrolla e riprova.";
     ls.className = "status err";
   }
 });
