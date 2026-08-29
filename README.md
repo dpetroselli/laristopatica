@@ -20,8 +20,29 @@ telefono (PWA).
 
 ## Pannello admin (per Michela)
 
+### Admin online (consigliato)
+
+Il pannello è pubblicato insieme al sito: **https://dpetroselli.github.io/laristopatica/admin/**
+(funziona da qualsiasi computer o tablet). Alla prima apertura chiede una «chiave di
+accesso» GitHub; una volta inserita la ricorda nel browser. Ogni «Salva e pubblica»
+scrive `content.json` nel repository e **il sito si aggiorna da solo in 1-2 minuti**.
+
+Per creare la chiave (una volta sola, ~2 minuti):
+
+1. Serve un account GitHub. Se è quello di Michela, prima va aggiunta come collaboratrice:
+   repo → Settings → Collaborators → Add people (lei accetta l'invito via mail).
+2. Dal suo account: https://github.com/settings/personal-access-tokens → **Generate new token**
+   - Nome: `admin ristopatica` — Scadenza: la massima disponibile
+   - Repository access: **Only select repositories** → `dpetroselli/laristopatica`
+   - Permissions → Repository permissions → **Contents: Read and write**
+3. Genera, copia la chiave (`github_pat_…`) e incollala nella schermata di accesso dell'admin.
+
+Quando la chiave scade, se ne genera una nuova allo stesso modo.
+
+### Admin locale (alternativa)
+
 Doppio click su **`Avvia admin.command`** (oppure `node admin.js` dal terminale), si apre
-http://localhost:8735 con il pannello in italiano:
+http://localhost:8735 con lo stesso pannello:
 
 - a sinistra l'elenco delle guide (Quartieri, Guide food, Viaggi) + «Sito» e «Chi sono»;
 - «**+ nuova**» crea una guida: titolo, emoji, colore card, introduzione, sezioni con
@@ -31,8 +52,8 @@ http://localhost:8735 con il pannello in italiano:
 - «**Anteprima sito**» apre il sito appena rigenerato (http://localhost:8735/site/);
 - ogni salvataggio crea un backup in `backups/`, quindi niente panico.
 
-L'unica cosa che l'admin non fa è caricare `dist/` online: dopo aver salvato va
-ripubblicata la cartella `dist/` (vedi sotto).
+Nota: l'admin **locale** rigenera solo la copia sul computer; per pubblicare serve poi
+`git push` (l'admin **online** invece pubblica da solo).
 
 ## Aggiornare a mano (senza admin)
 
