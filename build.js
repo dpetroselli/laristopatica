@@ -341,6 +341,9 @@ ${pages.map((p) => `  <url><loc>${site.domain}/${p === "index.html" ? "" : p}</l
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(path.join(DIST, "assets"), { recursive: true });
 fs.cpSync(path.join(ROOT, "assets"), path.join(DIST, "assets"), { recursive: true });
+// pannello admin online (salva su GitHub tramite API)
+fs.mkdirSync(path.join(DIST, "admin"), { recursive: true });
+fs.copyFileSync(path.join(ROOT, "admin", "index.html"), path.join(DIST, "admin", "index.html"));
 
 const written = [];
 function write(name, html) {

@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Admin — La Ristopatica</title>
-<link rel="icon" type="image/png" href="/assets/img/favicon-32.png">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../assets/img/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -48,6 +49,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 .side-item:hover { background: var(--bg); }
 .side-item.active { background: var(--brand); color: #fff; }
+.side-user { margin-top: 22px; padding: 8px 10px; font-size: 0.8rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
+.side-user button { background: none; border: none; color: var(--brand); font-size: 0.8rem; padding: 0; }
 
 /* --------------------------------------------------------------- main */
 .main { padding: 0 0 80px; }
@@ -60,6 +63,7 @@ button { font-family: inherit; cursor: pointer; }
 .status { font-size: 0.85rem; color: var(--ink-soft); }
 .status.ok { color: var(--ok); font-weight: 600; }
 .status.err { color: var(--brand); font-weight: 600; }
+.status a { color: inherit; }
 .btn {
   border: none; border-radius: 999px; padding: 9px 20px; font-weight: 600; font-size: 0.92rem;
   background: var(--brand); color: #fff;
@@ -71,7 +75,7 @@ button { font-family: inherit; cursor: pointer; }
 .editor { max-width: 860px; padding: 26px 28px; display: grid; gap: 18px; }
 .field label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.88rem; }
 .field .hint { font-weight: 400; color: var(--ink-soft); font-size: 0.8rem; margin-left: 6px; }
-input[type="text"], textarea, select {
+input[type="text"], input[type="password"], textarea, select {
   width: 100%; padding: 9px 12px; border: 1.5px solid var(--line); border-radius: 9px;
   background: var(--panel); color: var(--ink); font-family: inherit; font-size: 0.95rem;
 }
@@ -102,6 +106,20 @@ textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
 .muted { color: var(--ink-soft); font-size: 0.85rem; }
 .editor-actions { display: flex; gap: 10px; }
 
+/* --------------------------------------------------------------- login */
+.login {
+  position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); padding: 20px;
+}
+.login-box {
+  max-width: 460px; width: 100%; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 18px; padding: 34px; display: grid; gap: 14px; text-align: center;
+}
+.login-box img { width: 84px; height: 84px; border-radius: 50%; margin: 0 auto; }
+.login-box h1 { font-size: 1.4rem; }
+.login-box p { color: var(--ink-soft); font-size: 0.92rem; text-align: left; }
+.login-box .status { min-height: 1.2em; }
+
 @media (max-width: 800px) {
   .layout { grid-template-columns: 1fr; }
   .sidebar { border-right: none; border-bottom: 1px solid var(--line); }
@@ -110,13 +128,25 @@ textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
 </style>
 </head>
 <body>
+<div class="login" id="login" hidden>
+  <div class="login-box">
+    <img src="../assets/img/logo.png" alt="">
+    <h1>Admin La Ristopatica</h1>
+    <p>Ciao! Per salvare le modifiche sul sito serve la tua <strong>chiave di accesso GitHub</strong>
+    (te la fornisce chi gestisce il sito — è come una password dedicata, incollala qui una volta sola).</p>
+    <input type="password" id="token-input" placeholder="Incolla qui la chiave (github_pat_… o ghp_…)">
+    <button class="btn" id="token-save">Entra</button>
+    <span class="status" id="login-status"></span>
+  </div>
+</div>
+
 <div class="layout">
   <aside class="sidebar" id="sidebar"></aside>
   <div class="main">
     <div class="topbar">
       <h1 id="view-title">Admin</h1>
       <span class="status" id="status"></span>
-      <a class="btn ghost" href="/site/" target="_blank">Anteprima sito ↗</a>
+      <a class="btn ghost" id="preview-link" href="#" target="_blank">Anteprima sito ↗</a>
       <button class="btn" id="save">💾 Salva e pubblica</button>
     </div>
     <div class="editor" id="editor"></div>
@@ -125,7 +155,16 @@ textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
 
 <script>
 "use strict";
+// ---------------------------------------------------------------- config
+const REPO = "dpetroselli/laristopatica";
+const BRANCH = "main";
+const SITE_URL = "https://dpetroselli.github.io/laristopatica/";
+// Modalità: "local" quando gira col server admin.js (porta 8735), "github" quando è online.
+const LOCAL = location.port === "8735";
+const PREVIEW = LOCAL ? "/site/" : SITE_URL;
+
 let content = null;
+let fileSha = null; // sha di content.json su GitHub (per la modalità online)
 let view = { type: "guide", group: "quartieri", index: 0 };
 let dirty = false;
 
@@ -150,6 +189,109 @@ const el = (tag, attrs = {}, ...children) => {
   return n;
 };
 
+// ------------------------------------------------------- GitHub backend
+const tokenKey = "ristopatica-admin-token";
+const getToken = () => localStorage.getItem(tokenKey) || "";
+const ghHeaders = () => ({
+  Authorization: "Bearer " + getToken(),
+  Accept: "application/vnd.github+json",
+  "X-GitHub-Api-Version": "2022-11-28",
+});
+
+const b64encodeUtf8 = (s) => {
+  const bytes = new TextEncoder().encode(s);
+  let bin = "";
+  for (const b of bytes) bin += String.fromCharCode(b);
+  return btoa(bin);
+};
+const b64decodeUtf8 = (b64) => {
+  const bin = atob(b64.replace(/\n/g, ""));
+  const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+};
+
+async function ghGetFile() {
+  const r = await fetch(`https://api.github.com/repos/${REPO}/contents/content.json?ref=${BRANCH}`, {
+    headers: getToken() ? ghHeaders() : { Accept: "application/vnd.github+json" },
+    cache: "no-store",
+  });
+  if (!r.ok) throw new Error(r.status === 401 ? "chiave non valida" : `GitHub ha risposto ${r.status}`);
+  const data = await r.json();
+  return { json: JSON.parse(b64decodeUtf8(data.content)), sha: data.sha };
+}
+
+async function ghPutFile(json) {
+  // se qualcun altro ha salvato nel frattempo, avvisa prima di sovrascrivere
+  const latest = await ghGetFile();
+  if (latest.sha !== fileSha) {
+    if (!confirm("Attenzione: i contenuti sul sito sono stati modificati da qualcun altro dopo che hai aperto l'admin. Vuoi sovrascriverli con la tua versione?")) {
+      throw new Error("salvataggio annullato — ricarica la pagina per ripartire dai contenuti aggiornati");
+    }
+    fileSha = latest.sha;
+  }
+  const r = await fetch(`https://api.github.com/repos/${REPO}/contents/content.json`, {
+    method: "PUT",
+    headers: ghHeaders(),
+    body: JSON.stringify({
+      message: "Aggiornamento contenuti dall'admin",
+      content: b64encodeUtf8(JSON.stringify(json, null, 2)),
+      sha: fileSha,
+      branch: BRANCH,
+    }),
+  });
+  if (r.status === 401 || r.status === 403) throw new Error("chiave non valida o senza permessi di scrittura");
+  if (r.status === 409) throw new Error("conflitto di versione — ricarica la pagina e riprova");
+  if (!r.ok) throw new Error(`GitHub ha risposto ${r.status}`);
+  const out = await r.json();
+  fileSha = out.content.sha;
+}
+
+async function ghWhoAmI() {
+  const r = await fetch("https://api.github.com/user", { headers: ghHeaders() });
+  if (!r.ok) return null;
+  return (await r.json()).login;
+}
+
+// ------------------------------------------------- load/save (adapter)
+async function loadContent() {
+  if (LOCAL) {
+    content = await (await fetch("/api/content")).json();
+  } else {
+    const f = await ghGetFile();
+    content = f.json;
+    fileSha = f.sha;
+  }
+}
+
+// Controlli minimi prima di salvare (gli stessi del server locale).
+function validate(c) {
+  const slugs = new Set();
+  for (const [group] of GROUPS) {
+    for (const g of c[group]) {
+      if (!g.title || !g.title.trim()) return "ogni guida deve avere un titolo";
+      if (!g.slug || !/^[a-z0-9-]+$/.test(g.slug)) return `indirizzo pagina (slug) non valido per “${g.title}”`;
+      if (["index", "quartieri", "viaggi", "assets", "sw", "manifest", "admin"].includes(g.slug))
+        return `lo slug “${g.slug}” è riservato`;
+      if (slugs.has(g.slug)) return `due guide hanno lo stesso slug: “${g.slug}”`;
+      slugs.add(g.slug);
+    }
+  }
+  return null;
+}
+
+async function saveContent() {
+  const err = validate(content);
+  if (err) throw new Error(err);
+  if (LOCAL) {
+    const r = await fetch("/api/content", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(content) });
+    const out = await r.json();
+    if (!out.ok) throw new Error(out.error);
+  } else {
+    await ghPutFile(content);
+  }
+}
+
+// ------------------------------------------------------------- sidebar
 function setDirty(d) {
   dirty = d;
   $("#status").textContent = d ? "Modifiche non salvate" : "";
@@ -162,12 +304,11 @@ function slugify(s) {
     .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "guida";
 }
 
-// ------------------------------------------------------------- sidebar
 function renderSidebar() {
   const sb = $("#sidebar");
   sb.replaceChildren(
     el("div", { class: "brand" },
-      el("img", { src: "/assets/img/logo.png", alt: "" }),
+      el("img", { src: "../assets/img/logo.png", alt: "" }),
       el("div", {}, el("strong", {}, "La Ristopatica"), el("small", {}, "pannello contenuti"))
     ),
     sideBtn("⚙️ Sito e Instagram", view.type === "site", () => select({ type: "site" })),
@@ -180,7 +321,18 @@ function renderSidebar() {
             () => select({ type: "guide", group: key, index: i }))
         )
       )
-    )
+    ),
+    LOCAL ? null : el("div", { class: "side-user", id: "side-user" })
+  );
+  if (!LOCAL) refreshUser();
+}
+async function refreshUser() {
+  const box = $("#side-user");
+  if (!box) return;
+  const who = await ghWhoAmI();
+  box.replaceChildren(
+    el("span", {}, who ? `Connessa come ${who} · ` : "Chiave non verificata · "),
+    el("button", { onclick: () => { localStorage.removeItem(tokenKey); location.reload(); } }, "esci")
   );
 }
 function sideBtn(label, active, onclick) {
@@ -210,7 +362,6 @@ const textInput = (obj, key, extra = {}) =>
 const areaInput = (obj, key, rows) =>
   el("textarea", { rows: rows || 4, value: obj[key] || "", oninput: (e) => { obj[key] = e.target.value; setDirty(true); } });
 
-// paragrafi <-> textarea (separati da riga vuota)
 const parasToText = (arr) => (arr || []).join("\n\n");
 const textToParas = (t) => t.split(/\n\s*\n/).map((s) => s.trim().replace(/\s*\n\s*/g, " ")).filter(Boolean);
 function parasArea(obj, key, rows) {
@@ -247,7 +398,7 @@ function renderEditor() {
 
   const slugField = el("input", {
     type: "text", value: g.slug,
-    disabled: !g._new,
+    ...(g._new ? {} : { disabled: "" }),
     oninput: (e) => { g.slug = e.target.value; g._slugTouched = true; setDirty(true); },
   });
 
@@ -279,7 +430,7 @@ function renderEditor() {
     el("button", { class: "add-inline", onclick: () => { g.sections.push({ title: "✨ Nuova sezione", items: [{ name: "" }] }); setDirty(true); renderEditor(); } }, "+ Aggiungi sezione"),
     el("hr", { class: "section-sep" }),
     el("div", { class: "editor-actions" },
-      el("a", { class: "btn ghost", href: `/site/${g.slug}.html`, target: "_blank" }, "Apri questa pagina ↗"),
+      el("a", { class: "btn ghost", href: `${PREVIEW}${g.slug}.html`, target: "_blank" }, "Apri questa pagina ↗"),
       el("button", {
         class: "btn danger",
         onclick: () => {
@@ -350,31 +501,75 @@ async function save() {
         if (s.paras && !s.paras.length) delete s.paras;
       }
     }
-  status.textContent = "Salvataggio e rigenerazione…";
+  status.textContent = LOCAL ? "Salvataggio e rigenerazione…" : "Salvataggio su GitHub…";
   status.className = "status";
   try {
-    const r = await fetch("/api/content", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(content) });
-    const out = await r.json();
-    if (out.ok) {
-      setDirty(false);
-      status.textContent = "✔ Salvato: il sito è aggiornato";
-      status.className = "status ok";
-      renderSidebar(); renderEditor();
+    await saveContent();
+    setDirty(false);
+    status.replaceChildren();
+    if (LOCAL) {
+      status.append("✔ Salvato: il sito è aggiornato");
     } else {
-      status.textContent = "Errore: " + out.error;
-      status.className = "status err";
+      status.append("✔ Salvato! Il sito si aggiorna da solo in 1-2 minuti (",
+        el("a", { href: `https://github.com/${REPO}/actions`, target: "_blank" }, "stato"), ")");
     }
+    status.className = "status ok";
+    renderSidebar(); renderEditor();
   } catch (e) {
-    status.textContent = "Errore di rete: admin non raggiungibile";
+    status.textContent = "Errore: " + e.message;
     status.className = "status err";
   }
 }
+
+// ---------------------------------------------------------------- avvio
+async function start() {
+  $("#preview-link").href = PREVIEW;
+  if (!LOCAL && !getToken()) {
+    $("#login").hidden = false;
+    return;
+  }
+  try {
+    await loadContent();
+  } catch (e) {
+    if (!LOCAL) {
+      // chiave scaduta o revocata: torna al login
+      localStorage.removeItem(tokenKey);
+      $("#login").hidden = false;
+      $("#login-status").textContent = "Accesso scaduto o non valido: incolla di nuovo la chiave.";
+      $("#login-status").className = "status err";
+      return;
+    }
+    $("#status").textContent = "Errore nel caricare i contenuti: " + e.message;
+    $("#status").className = "status err";
+    return;
+  }
+  $("#login").hidden = true;
+  renderSidebar(); renderEditor();
+}
+
+$("#token-save").addEventListener("click", async () => {
+  const t = $("#token-input").value.trim();
+  const ls = $("#login-status");
+  if (!t) { ls.textContent = "Incolla la chiave nel campo qui sopra."; ls.className = "status err"; return; }
+  localStorage.setItem(tokenKey, t);
+  ls.textContent = "Verifica in corso…"; ls.className = "status";
+  try {
+    await loadContent();
+    $("#login").hidden = true;
+    renderSidebar(); renderEditor();
+  } catch (e) {
+    localStorage.removeItem(tokenKey);
+    ls.textContent = "Chiave non valida o senza accesso al sito. Ricontrolla e riprova.";
+    ls.className = "status err";
+  }
+});
+$("#token-input").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#token-save").click(); });
 
 $("#save").addEventListener("click", save);
 window.addEventListener("beforeunload", (e) => { if (dirty) e.preventDefault(); });
 window.addEventListener("keydown", (e) => { if ((e.metaKey || e.ctrlKey) && e.key === "s") { e.preventDefault(); save(); } });
 
-fetch("/api/content").then((r) => r.json()).then((c) => { content = c; renderSidebar(); renderEditor(); });
+start();
 </script>
 </body>
 </html>
