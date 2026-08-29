@@ -1,0 +1,10 @@
+# Generati: si ricreano con `node build.js` / `node gen-artifact.js`
+dist/
+artifact.html
+
+# Backup locali dell'admin
+backups/
+
+# Sistema
+.DS_Store
+node_modules/

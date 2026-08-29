@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ristopatica",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8734", "--directory", "dist"],
+      "port": 8734
+    },
+    {
+      "name": "admin",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["admin.js"],
+      "port": 8735
+    }
+  ]
+}

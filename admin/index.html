@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — La Ristopatica</title>
+<link rel="icon" type="image/png" href="/assets/img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf3eb; --panel: #fffdf9; --ink: #241e18; --ink-soft: #5c534a;
+  --brand: #c2372c; --brand-dark: #9c2a21; --line: #e8ddd0; --ok: #3d7a44;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #191512; --panel: #221d19; --ink: #f0e8de; --ink-soft: #b3a89c;
+    --brand: #e05a4e; --brand-dark: #ef7c72; --line: #38302a; --ok: #7dc287;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Work Sans", system-ui, sans-serif; background: var(--bg); color: var(--ink); font-size: 15px; }
+h1, h2, h3 { font-family: "Fraunces", Georgia, serif; }
+button { font-family: inherit; cursor: pointer; }
+
+.layout { display: grid; grid-template-columns: 290px 1fr; min-height: 100vh; }
+
+/* ------------------------------------------------------------ sidebar */
+.sidebar { background: var(--panel); border-right: 1px solid var(--line); padding: 18px 14px 40px; overflow-y: auto; }
+.brand { display: flex; align-items: center; gap: 10px; padding: 4px 8px 16px; }
+.brand img { width: 44px; height: 44px; border-radius: 50%; }
+.brand strong { font-family: "Fraunces", serif; font-size: 1.05rem; }
+.brand small { display: block; color: var(--ink-soft); font-size: 0.75rem; }
+.side-group { margin-top: 14px; }
+.side-group > h3 {
+  font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--ink-soft); padding: 6px 8px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.side-group .add {
+  border: 1px solid var(--line); background: none; color: var(--brand);
+  border-radius: 6px; font-size: 0.85rem; padding: 1px 8px; font-weight: 600;
+}
+.side-item {
+  display: block; width: 100%; text-align: left; background: none; border: none;
+  padding: 8px 10px; border-radius: 8px; color: var(--ink); font-size: 0.92rem;
+}
+.side-item:hover { background: var(--bg); }
+.side-item.active { background: var(--brand); color: #fff; }
+
+/* --------------------------------------------------------------- main */
+.main { padding: 0 0 80px; }
+.topbar {
+  position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 14px;
+  background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line); padding: 12px 28px;
+}
+.topbar h1 { font-size: 1.15rem; flex: 1; }
+.status { font-size: 0.85rem; color: var(--ink-soft); }
+.status.ok { color: var(--ok); font-weight: 600; }
+.status.err { color: var(--brand); font-weight: 600; }
+.btn {
+  border: none; border-radius: 999px; padding: 9px 20px; font-weight: 600; font-size: 0.92rem;
+  background: var(--brand); color: #fff;
+}
+.btn:hover { background: var(--brand-dark); }
+.btn.ghost { background: none; color: var(--ink); border: 1.5px solid var(--line); text-decoration: none; }
+.btn.danger { background: none; color: var(--brand); border: 1.5px solid var(--brand); }
+
+.editor { max-width: 860px; padding: 26px 28px; display: grid; gap: 18px; }
+.field label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.88rem; }
+.field .hint { font-weight: 400; color: var(--ink-soft); font-size: 0.8rem; margin-left: 6px; }
+input[type="text"], textarea, select {
+  width: 100%; padding: 9px 12px; border: 1.5px solid var(--line); border-radius: 9px;
+  background: var(--panel); color: var(--ink); font-family: inherit; font-size: 0.95rem;
+}
+input:focus, textarea:focus, select:focus { outline: none; border-color: var(--brand); }
+textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.row-3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 14px; }
+
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px;
+  display: grid; gap: 12px;
+}
+.card-head { display: flex; align-items: center; gap: 8px; }
+.card-head input { font-weight: 600; }
+.icon-btn {
+  border: 1px solid var(--line); background: none; color: var(--ink-soft);
+  border-radius: 7px; width: 30px; height: 30px; font-size: 0.9rem; flex: none;
+}
+.icon-btn:hover { color: var(--brand); border-color: var(--brand); }
+
+.item-row { display: grid; grid-template-columns: 1.2fr 0.8fr 2fr auto auto auto; gap: 8px; align-items: center; }
+.item-row input { padding: 7px 10px; font-size: 0.9rem; }
+.items-head { display: grid; grid-template-columns: 1.2fr 0.8fr 2fr auto; gap: 8px; font-size: 0.75rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; }
+.add-inline { border: 1.5px dashed var(--line); background: none; color: var(--ink-soft); border-radius: 9px; padding: 9px; font-size: 0.9rem; width: 100%; }
+.add-inline:hover { color: var(--brand); border-color: var(--brand); }
+.check { display: flex; gap: 8px; align-items: center; font-size: 0.88rem; color: var(--ink-soft); }
+.section-sep { border: none; border-top: 1px solid var(--line); margin: 6px 0; }
+.muted { color: var(--ink-soft); font-size: 0.85rem; }
+.editor-actions { display: flex; gap: 10px; }
+
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  .row, .row-3, .item-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <div class="topbar">
+      <h1 id="view-title">Admin</h1>
+      <span class="status" id="status"></span>
+      <a class="btn ghost" href="/site/" target="_blank">Anteprima sito ↗</a>
+      <button class="btn" id="save">💾 Salva e pubblica</button>
+    </div>
+    <div class="editor" id="editor"></div>
+  </div>
+</div>
+
+<script>
+"use strict";
+let content = null;
+let view = { type: "guide", group: "quartieri", index: 0 };
+let dirty = false;
+
+const GROUPS = [
+  ["quartieri", "🍝 Quartieri di Roma"],
+  ["guideFood", "🥐 Guide food"],
+  ["viaggi", "✈️ Mini guide di viaggio"],
+];
+const COLORS = ["terracotta", "oliva", "rosa", "blu", "senape", "azzurro"];
+
+const $ = (sel) => document.querySelector(sel);
+const el = (tag, attrs = {}, ...children) => {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") n.className = v;
+    else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+    else if (k === "value") n.value = v;
+    else if (k === "checked") n.checked = v;
+    else n.setAttribute(k, v);
+  }
+  for (const c of children) if (c != null) n.append(c);
+  return n;
+};
+
+function setDirty(d) {
+  dirty = d;
+  $("#status").textContent = d ? "Modifiche non salvate" : "";
+  $("#status").className = "status";
+}
+
+function slugify(s) {
+  return s.toLowerCase()
+    .normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "guida";
+}
+
+// ------------------------------------------------------------- sidebar
+function renderSidebar() {
+  const sb = $("#sidebar");
+  sb.replaceChildren(
+    el("div", { class: "brand" },
+      el("img", { src: "/assets/img/logo.png", alt: "" }),
+      el("div", {}, el("strong", {}, "La Ristopatica"), el("small", {}, "pannello contenuti"))
+    ),
+    sideBtn("⚙️ Sito e Instagram", view.type === "site", () => select({ type: "site" })),
+    sideBtn("👩‍🍳 Chi sono", view.type === "about", () => select({ type: "about" })),
+    ...GROUPS.map(([key, label]) =>
+      el("div", { class: "side-group" },
+        el("h3", {}, label, el("button", { class: "add", title: "Aggiungi guida", onclick: () => addGuide(key) }, "+ nuova")),
+        ...content[key].map((g, i) =>
+          sideBtn(`${g.emoji || "📄"} ${g.title}`, view.type === "guide" && view.group === key && view.index === i,
+            () => select({ type: "guide", group: key, index: i }))
+        )
+      )
+    )
+  );
+}
+function sideBtn(label, active, onclick) {
+  return el("button", { class: "side-item" + (active ? " active" : ""), onclick }, label);
+}
+
+function select(v) { view = v; renderSidebar(); renderEditor(); }
+
+function addGuide(group) {
+  content[group].push({
+    slug: "", title: "Nuova guida", emoji: "📍", color: COLORS[content[group].length % COLORS.length],
+    teaser: "", intro: [""], sections: [{ title: "🍴 Dove mangiare", items: [{ name: "" }] }],
+    _new: true,
+  });
+  setDirty(true);
+  select({ type: "guide", group, index: content[group].length - 1 });
+}
+
+// ------------------------------------------------------------- editors
+function field(labelText, input, hint) {
+  const lab = el("label", {}, labelText);
+  if (hint) lab.append(el("span", { class: "hint" }, hint));
+  return el("div", { class: "field" }, lab, input);
+}
+const textInput = (obj, key, extra = {}) =>
+  el("input", { type: "text", value: obj[key] || "", oninput: (e) => { obj[key] = e.target.value; setDirty(true); extra.oninput && extra.oninput(e); } });
+const areaInput = (obj, key, rows) =>
+  el("textarea", { rows: rows || 4, value: obj[key] || "", oninput: (e) => { obj[key] = e.target.value; setDirty(true); } });
+
+// paragrafi <-> textarea (separati da riga vuota)
+const parasToText = (arr) => (arr || []).join("\n\n");
+const textToParas = (t) => t.split(/\n\s*\n/).map((s) => s.trim().replace(/\s*\n\s*/g, " ")).filter(Boolean);
+function parasArea(obj, key, rows) {
+  return el("textarea", { rows: rows || 8, value: parasToText(obj[key]), oninput: (e) => { obj[key] = textToParas(e.target.value); setDirty(true); } });
+}
+
+function renderEditor() {
+  const ed = $("#editor");
+  if (view.type === "site") {
+    $("#view-title").textContent = "⚙️ Sito e Instagram";
+    ed.replaceChildren(
+      field("Nome del sito", textInput(content.site, "name")),
+      field("Slogan", textInput(content.site, "tagline"), "compare sotto il titolo in home"),
+      field("Descrizione", areaInput(content.site, "description", 3), "usata da Google e dai social"),
+      el("div", { class: "row" },
+        field("Link Instagram", textInput(content.site, "instagram")),
+        field("Nome utente Instagram", textInput(content.site, "instagramHandle"))
+      ),
+      field("Dominio del sito", textInput(content.site, "domain"), "serve per SEO e sitemap — non toccare se non cambia")
+    );
+    return;
+  }
+  if (view.type === "about") {
+    $("#view-title").textContent = "👩‍🍳 Chi sono";
+    ed.replaceChildren(
+      field("Titolo", textInput(content.about, "title")),
+      field("Testo", parasArea(content.about, "paragraphs", 16), "un paragrafo per blocco, separati da una riga vuota")
+    );
+    return;
+  }
+
+  const g = content[view.group][view.index];
+  $("#view-title").textContent = `${g.emoji || ""} ${g.title}`;
+
+  const slugField = el("input", {
+    type: "text", value: g.slug,
+    disabled: !g._new,
+    oninput: (e) => { g.slug = e.target.value; g._slugTouched = true; setDirty(true); },
+  });
+
+  const titleInput = textInput(g, "title", {
+    oninput: () => {
+      if (g._new && !g._slugTouched) { g.slug = slugify(g.title); slugField.value = g.slug; }
+      $("#view-title").textContent = `${g.emoji || ""} ${g.title}`;
+      renderSidebar();
+    },
+  });
+
+  const colorSel = el("select", { onchange: (e) => { g.color = e.target.value; setDirty(true); } },
+    ...COLORS.map((c) => el("option", { value: c, ...(g.color === c ? { selected: "" } : {}) }, c)));
+
+  ed.replaceChildren(
+    el("div", { class: "row-3" },
+      field("Titolo", titleInput),
+      field("Emoji", textInput(g, "emoji", { oninput: () => { $("#view-title").textContent = `${g.emoji || ""} ${g.title}`; renderSidebar(); } })),
+      field("Colore card", colorSel)
+    ),
+    el("div", { class: "row" },
+      field("Frase breve (teaser)", textInput(g, "teaser"), "compare sulla card e sotto il titolo"),
+      field("Indirizzo pagina (slug)", slugField, g._new ? "generato dal titolo, puoi cambiarlo" : "bloccato per non rompere i link")
+    ),
+    field("Introduzione", parasArea(g, "intro", 8), "un paragrafo per blocco, separati da una riga vuota"),
+    el("h2", {}, "Sezioni"),
+    el("p", { class: "muted" }, "Ogni sezione ha un titolo (es. “🍕 Pizza & Street Food”), un testo opzionale e un elenco di posti. Luogo e nota sono facoltativi."),
+    ...g.sections.map((s, si) => sectionCard(g, s, si)),
+    el("button", { class: "add-inline", onclick: () => { g.sections.push({ title: "✨ Nuova sezione", items: [{ name: "" }] }); setDirty(true); renderEditor(); } }, "+ Aggiungi sezione"),
+    el("hr", { class: "section-sep" }),
+    el("div", { class: "editor-actions" },
+      el("a", { class: "btn ghost", href: `/site/${g.slug}.html`, target: "_blank" }, "Apri questa pagina ↗"),
+      el("button", {
+        class: "btn danger",
+        onclick: () => {
+          if (!confirm(`Eliminare la guida “${g.title}”? (Puoi ancora annullare non salvando)`)) return;
+          content[view.group].splice(view.index, 1);
+          setDirty(true);
+          select(content[view.group].length ? { type: "guide", group: view.group, index: 0 } : { type: "site" });
+        },
+      }, "🗑 Elimina guida")
+    )
+  );
+}
+
+function sectionCard(g, s, si) {
+  const move = (dir) => {
+    const to = si + dir;
+    if (to < 0 || to >= g.sections.length) return;
+    [g.sections[si], g.sections[to]] = [g.sections[to], g.sections[si]];
+    setDirty(true); renderEditor();
+  };
+  const items = s.items || (s.items = []);
+  return el("div", { class: "card" },
+    el("div", { class: "card-head" },
+      textInput(s, "title"),
+      el("button", { class: "icon-btn", title: "Sposta su", onclick: () => move(-1) }, "↑"),
+      el("button", { class: "icon-btn", title: "Sposta giù", onclick: () => move(1) }, "↓"),
+      el("button", { class: "icon-btn", title: "Elimina sezione", onclick: () => { if (confirm("Eliminare questa sezione?")) { g.sections.splice(si, 1); setDirty(true); renderEditor(); } } }, "🗑")
+    ),
+    field("Testo della sezione (opzionale)", parasArea(s, "paras", 3)),
+    items.length ? el("div", { class: "items-head" }, el("span", {}, "Nome"), el("span", {}, "Luogo"), el("span", {}, "Nota / descrizione"), el("span")) : null,
+    ...items.map((it, ii) => itemRow(g, s, it, ii)),
+    el("button", { class: "add-inline", onclick: () => { items.push({ name: "" }); setDirty(true); renderEditor(); } }, "+ Aggiungi posto"),
+    el("label", { class: "check" },
+      el("input", { type: "checkbox", ...(s.grid ? { checked: true } : {}), onchange: (e) => { if (e.target.checked) s.grid = true; else delete s.grid; setDirty(true); } }),
+      "Mostra come griglia compatta (solo nomi, per elenchi lunghi)"
+    )
+  );
+}
+
+function itemRow(g, s, it, ii) {
+  const move = (dir) => {
+    const to = ii + dir;
+    if (to < 0 || to >= s.items.length) return;
+    [s.items[ii], s.items[to]] = [s.items[to], s.items[ii]];
+    setDirty(true); renderEditor();
+  };
+  return el("div", { class: "item-row" },
+    textInput(it, "name"),
+    textInput(it, "place"),
+    textInput(it, "desc"),
+    el("button", { class: "icon-btn", title: "Su", onclick: () => move(-1) }, "↑"),
+    el("button", { class: "icon-btn", title: "Giù", onclick: () => move(1) }, "↓"),
+    el("button", { class: "icon-btn", title: "Elimina", onclick: () => { s.items.splice(ii, 1); setDirty(true); renderEditor(); } }, "🗑")
+  );
+}
+
+// ---------------------------------------------------------------- save
+async function save() {
+  const status = $("#status");
+  // pulizia campi interni e voci vuote
+  for (const [key] of GROUPS)
+    for (const g of content[key]) {
+      if (g._new && !g.slug) g.slug = slugify(g.title);
+      delete g._new; delete g._slugTouched;
+      for (const s of g.sections) {
+        if (s.items) s.items = s.items.filter((it) => (it.name || "").trim());
+        for (const it of s.items || []) { if (!it.place) delete it.place; if (!it.desc) delete it.desc; }
+        if (s.paras && !s.paras.length) delete s.paras;
+      }
+    }
+  status.textContent = "Salvataggio e rigenerazione…";
+  status.className = "status";
+  try {
+    const r = await fetch("/api/content", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(content) });
+    const out = await r.json();
+    if (out.ok) {
+      setDirty(false);
+      status.textContent = "✔ Salvato: il sito è aggiornato";
+      status.className = "status ok";
+      renderSidebar(); renderEditor();
+    } else {
+      status.textContent = "Errore: " + out.error;
+      status.className = "status err";
+    }
+  } catch (e) {
+    status.textContent = "Errore di rete: admin non raggiungibile";
+    status.className = "status err";
+  }
+}
+
+$("#save").addEventListener("click", save);
+window.addEventListener("beforeunload", (e) => { if (dirty) e.preventDefault(); });
+window.addEventListener("keydown", (e) => { if ((e.metaKey || e.ctrlKey) && e.key === "s") { e.preventDefault(); save(); } });
+
+fetch("/api/content").then((r) => r.json()).then((c) => { content = c; renderSidebar(); renderEditor(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,1868 @@
+{
+  "site": {
+    "name": "La Ristopatica",
+    "tagline": "Racconti di cibo, ristoranti e luoghi che restano nel cuore",
+    "description": "La Ristopatica è lo spazio di Michela Bosco dedicato alla ristorazione: guide gastronomiche dei quartieri di Roma, colazioni imperdibili, gite nel Lazio e mini guide di viaggio.",
+    "instagram": "https://www.instagram.com/la_ristopatica",
+    "instagramHandle": "@la_ristopatica",
+    "domain": "https://laristopatica.com"
+  },
+  "about": {
+    "title": "Ciao, sono Michela",
+    "paragraphs": [
+      "Sono Michela Bosco, fondatrice di La Ristopatica, uno spazio virtuale dedicato alla ristorazione, al racconto del cibo e ai luoghi che lo rendono memorabile.",
+      "La mia passione è nata da bambina, tra i tavoli in legno massiccio del ristorante di mio nonno in Piazza dei Mercanti a Trastevere, dove da subito ho avvertito la magia che prende forma in cucina, il fervore della sala, la lieve eccitazione degli avventori in attesa di esplorare nuovi sapori e quell'alchimia sottile che trasforma un boccone in un'esperienza. Un interesse che nel tempo si è trasformato in vera e propria necessità di approfondire tramite formazione, metodo e ricerca.",
+      "Nel 2012 mi sono diplomata cuoca presso la Scuola di Arte Culinaria Cordon Bleu di Roma, approfondendo le tecniche dell'alta cucina e la cultura gastronomica. Ho successivamente conseguito un diploma da Social Media Manager, integrando competenze di comunicazione digitale e storytelling al mio percorso nel mondo food & hospitality.",
+      "I posti che mi rubano il cuore e di cui amo parlare sono quelli che non spostano mai l'attenzione dai dettagli e dalla cura: locali che danno valore al lavoro dei piccoli produttori e che, attraverso il menu, sanno evocare passioni, tradizioni e storie di territorio.",
+      "Con La Ristopatica racconto ristoranti, bistrot e trattorie autentiche a Roma e dintorni, con lo sguardo rivolto verso la qualità, l'identità e l'esperienza in sala. Condivido guide gastronomiche di quartiere, appunti di viaggio e storie di sapori, collaborando con realtà del settore food, turismo e ospitalità."
+    ]
+  },
+  "quartieri": [
+    {
+      "slug": "trastevere",
+      "title": "Trastevere",
+      "emoji": "🍝",
+      "color": "terracotta",
+      "teaser": "Poetica e sfacciata, ti trascina a mangiare il supplì alle 11 di sera.",
+      "intro": [
+        "Se Trastevere fosse una persona arriverebbe sempre in ritardo, volteggiando con una gonna lunga a fiori e gli anfibi, capelli intricati come l'edera che si arrampica sui muri color ruggine. Poetica e sfacciata allo stesso tempo.",
+        "Sarebbe quella che indossa il grembiule da cucina a piedi scalzi e ti trascina a mangiare il supplì alle 11 di sera. La notte non dorme e la mattina è quieta e stropicciata.",
+        "Dentro di sé racchiude la luce dorata di Roma, il caos, il buio e un fascino senza tempo. Un po' artista, un po' nonna che stende i panni fuori dalla finestra, un po' quel gatto grassottello che ti tiene d'occhio mentre si stiracchia su un muretto.",
+        "Trastevere è una melodia composta dal rumore delle tazzine che sbattono sul bancone di un bar, dai clacson strombazzanti sul lungotevere e dalle chiacchiere fuori dai locali, con un bicchiere di vino in mano."
+      ],
+      "sections": [
+        {
+          "title": "⭐ Stellati / Gourmet",
+          "items": [
+            {
+              "name": "Glass Hostaria"
+            },
+            {
+              "name": "Zia Restaurant"
+            },
+            {
+              "name": "Pianostrada"
+            }
+          ]
+        },
+        {
+          "title": "🍝 Trattorie / Bistrot",
+          "items": [
+            {
+              "name": "Da Enzo al 29"
+            },
+            {
+              "name": "Proloco Trastevere"
+            },
+            {
+              "name": "Ditta Trinchetti"
+            },
+            {
+              "name": "Vanda"
+            },
+            {
+              "name": "Ivo a Trastevere"
+            },
+            {
+              "name": "Eggs"
+            }
+          ]
+        },
+        {
+          "title": "🍕 Pizza & Street Food",
+          "items": [
+            {
+              "name": "Pizzeria Ai Marmi"
+            },
+            {
+              "name": "Trapizzino Trastevere"
+            },
+            {
+              "name": "Supplì Roma"
+            },
+            {
+              "name": "Forno la Renella",
+              "desc": "pizza al taglio"
+            }
+          ]
+        },
+        {
+          "title": "🍷 Aperitivi / Enoteche",
+          "items": [
+            {
+              "name": "Freni e Frizioni"
+            },
+            {
+              "name": "Enoteca l'Antidoto"
+            },
+            {
+              "name": "Jacopa"
+            },
+            {
+              "name": "Latteria Trastevere"
+            }
+          ]
+        },
+        {
+          "title": "🌍 Cucine dal mondo",
+          "items": [
+            {
+              "name": "Akropolis",
+              "desc": "taverna greca"
+            },
+            {
+              "name": "Igio",
+              "desc": "cucina coreana"
+            },
+            {
+              "name": "Bali Bar",
+              "desc": "cucina indonesiana"
+            },
+            {
+              "name": "Aromaticus",
+              "desc": "vegetariano-vegano"
+            }
+          ]
+        },
+        {
+          "title": "🍩 Colazioni / Merende / Gelati",
+          "items": [
+            {
+              "name": "Le Levain"
+            },
+            {
+              "name": "I dolci di Checco"
+            },
+            {
+              "name": "Mammò"
+            },
+            {
+              "name": "Giuffrè"
+            },
+            {
+              "name": "Otaleg!",
+              "desc": "gelateria"
+            },
+            {
+              "name": "FataMorgana",
+              "desc": "gelateria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "san-giovanni",
+      "title": "San Giovanni / Appio Latino",
+      "emoji": "🍕",
+      "color": "oliva",
+      "teaser": "Niente hype, solo cose fatte come si deve.",
+      "intro": [
+        "San Giovanni è quel quartiere di mezzo: centrale ma non troppo, di una bellezza camuffata, come quella donna di mezza età che non se la tira, ma se la guardi bene ha una luce e una regalità tutta sua.",
+        "Il quartiere che ti accontenta sempre, col caffè giusto sotto casa, la pizza buona a tutte le ore e il ristorante che non delude mai, e si fa perdonare il traffico e la scarsità cronica di parcheggi.",
+        "È un quartiere sincero, che non fa scena, ma si mostra a chi ha la pazienza di capirlo. Con i suoi giardini interni nascosti dietro ai portoni dei palazzi d'epoca, le insegne luminose che resistono e i locali nuovi che aprono senza troppo rumore ma promettono di diventare famosi.",
+        "Qui si mangia bene, si beve bene, e si vive Roma per davvero. Niente hype, solo cose fatte come si deve."
+      ],
+      "sections": [
+        {
+          "title": "🍽️ Contemporanea Gourmet",
+          "items": [
+            {
+              "name": "Dogma"
+            },
+            {
+              "name": "Barred"
+            }
+          ]
+        },
+        {
+          "title": "🍝 Trattorie / Bistrot",
+          "items": [
+            {
+              "name": "Santo Palato"
+            },
+            {
+              "name": "Trattoria Etruria"
+            },
+            {
+              "name": "Osteria 22quattro"
+            },
+            {
+              "name": "Dar Bruttone"
+            }
+          ]
+        },
+        {
+          "title": "🍕 Pizza",
+          "items": [
+            {
+              "name": "Al Grottino"
+            },
+            {
+              "name": "Favilla"
+            },
+            {
+              "name": "I Quintili"
+            },
+            {
+              "name": "Pizza Chef",
+              "desc": "pizza al taglio"
+            },
+            {
+              "name": "Frumentario",
+              "desc": "pizza al taglio"
+            }
+          ]
+        },
+        {
+          "title": "🍷 Aperitivi / Enoteche",
+          "items": [
+            {
+              "name": "Enoteca Verso"
+            },
+            {
+              "name": "Blind Pig"
+            },
+            {
+              "name": "5e28"
+            },
+            {
+              "name": "Piano C",
+              "desc": "circolo del vino"
+            }
+          ]
+        },
+        {
+          "title": "🌍 Cucine dal mondo",
+          "items": [
+            {
+              "name": "Umami",
+              "desc": "cucina giapponese"
+            },
+            {
+              "name": "Pho 1",
+              "desc": "cucina vietnamita"
+            },
+            {
+              "name": "Thai Inn"
+            },
+            {
+              "name": "Byblos",
+              "desc": "cucina libanese"
+            },
+            {
+              "name": "MI",
+              "desc": "cinese contemporaneo"
+            }
+          ]
+        },
+        {
+          "title": "🍩 Caffetterie / Pasticcerie",
+          "items": [
+            {
+              "name": "Charlotte"
+            },
+            {
+              "name": "Gastromario"
+            },
+            {
+              "name": "Materia"
+            },
+            {
+              "name": "MokaMilk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "garbatella",
+      "title": "Garbatella",
+      "emoji": "❤️",
+      "color": "rosa",
+      "teaser": "Una carezza ruvida e sincera come la Roma autentica.",
+      "intro": [
+        "Garbatella è uno dei quartieri preferiti di noi romani: una signora d'altri tempi con le ciabatte ai piedi e il rossetto acceso.",
+        "È un quartiere che ti parla con l'accento strascicato, ti fa venire voglia di amatriciana anche se non hai fame e poi ti fa sedere su una panchina all'ombra, a guardare la vita che scorre.",
+        "Tra l'edera che si arrampica sui villini liberty e i panni stesi alle finestre che raccontano storie di famiglia. La street art spicca sulle facciate di vecchi palazzi, le chiacchiere rimbalzano tra i cortili interni e le trattorie sfornano più carbonara che aria.",
+        "Garbatella è una carezza ruvida e sincera come la Roma autentica ❤️"
+      ],
+      "sections": [
+        {
+          "title": "🍝 Trattorie",
+          "items": [
+            {
+              "name": "Anni e Bicchieri"
+            },
+            {
+              "name": "Ristoro degli angeli"
+            },
+            {
+              "name": "Trecca"
+            },
+            {
+              "name": "Tre de tutto"
+            }
+          ]
+        },
+        {
+          "title": "🍕 Pizza & Street Food",
+          "items": [
+            {
+              "name": "Tozzo"
+            },
+            {
+              "name": "Pantera",
+              "desc": "pizza al taglio"
+            }
+          ]
+        },
+        {
+          "title": "🍷 Aperitivi / Enoteche",
+          "items": [
+            {
+              "name": "Enoteca la mescita"
+            },
+            {
+              "name": "Latteria Garbatella"
+            },
+            {
+              "name": "Smile"
+            },
+            {
+              "name": "Gentle Boozers"
+            }
+          ]
+        },
+        {
+          "title": "🌍 Cucine dal mondo",
+          "items": [
+            {
+              "name": "Tuk Tuk",
+              "desc": "thai bar"
+            },
+            {
+              "name": "Aisi",
+              "desc": "ristorante georgiano"
+            },
+            {
+              "name": "Pulgarcito",
+              "desc": "cucina di El Salvador"
+            }
+          ]
+        },
+        {
+          "title": "🍩 Colazioni / Merende / Gelati",
+          "items": [
+            {
+              "name": "Nero Vaniglia"
+            },
+            {
+              "name": "Biffi"
+            },
+            {
+              "name": "Cremeria Alpi"
+            }
+          ]
+        },
+        {
+          "title": "✨ Extra",
+          "items": [
+            {
+              "name": "Vegustibus"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ostiense",
+      "title": "Ostiense / Gazometro",
+      "emoji": "🏭",
+      "color": "blu",
+      "teaser": "Il food district dei romani amanti della gastronomia.",
+      "intro": [
+        "Ostiense sta diventando sempre di più un punto di incontro per i romani amanti della gastronomia: un vero e proprio food district pieno di proposte interessanti e diversificate.",
+        "Partiamo subito dal presupposto che non potevo menzionarli tutti tutti, ma ho indicato i miei riferimenti del cuore, consapevole che ce ne sono di nuovi di cui mi innamorerò presto ma che ancora non ho provato."
+      ],
+      "sections": [
+        {
+          "title": "🍝 Trattorie moderne / Bistrot",
+          "items": [
+            {
+              "name": "Trattoria Pennestri"
+            },
+            {
+              "name": "Osteria fratelli Mori"
+            },
+            {
+              "name": "Romeow Cat Bistrot"
+            },
+            {
+              "name": "Origine"
+            }
+          ]
+        },
+        {
+          "title": "🍕 Pizza",
+          "items": [
+            {
+              "name": "Pizzeria Ostiense"
+            },
+            {
+              "name": "San Martino Pizza e Bolle"
+            },
+            {
+              "name": "Spiazzo"
+            },
+            {
+              "name": "Brucio"
+            }
+          ]
+        },
+        {
+          "title": "🍷 Aperitivi / Enoteche",
+          "items": [
+            {
+              "name": "Latta Fermenti e Miscele"
+            },
+            {
+              "name": "Magnebevo e sto a Ostiense"
+            }
+          ]
+        },
+        {
+          "title": "🌍 Cucine dal mondo",
+          "items": [
+            {
+              "name": "MaMa Ya Ramen"
+            },
+            {
+              "name": "Tanuki Izakaya"
+            },
+            {
+              "name": "Sushisen"
+            },
+            {
+              "name": "Sinosteria",
+              "desc": "cinese"
+            },
+            {
+              "name": "Taberna persiana"
+            }
+          ]
+        },
+        {
+          "title": "🍩 Colazioni / Merende / Gelati",
+          "items": [
+            {
+              "name": "Cafè Merenda"
+            },
+            {
+              "name": "Casa Manfredi Teatro"
+            },
+            {
+              "name": "Andreotti"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "testaccio",
+      "title": "Testaccio",
+      "emoji": "🥖",
+      "color": "senape",
+      "teaser": "Ti porta dove si mangia serio e ti spiega la gricia “come se deve”.",
+      "intro": [
+        "Se Testaccio fosse una persona sarebbe un vecchio signore in pensione: cappello in testa, abbronzatura da giornale letto al sole al bar della piazzetta, rughe profonde che raccontano storie silenziose, sguardo vivo e passo solenne.",
+        "Cammina tra i banchi del mercato come un re, salutando tutti per nome con tono ruvido e affettuoso. Profuma di caffè, di cicoria ripassata con l'aglio, di pane caldo la mattina presto. Parla poco, ma quando lo fa ti incanta con la sua idea di Roma, di com'era “quanno ce stava il mattatoio”, di colazioni della domenica coi maritozzi alla panna, di tavolate rumorose e piatti cucinati con cura.",
+        "Ha un animo operaio, mani forti e un'eleganza inconsapevole e sincera. Ti porta dove si mangia serio, ti spiega la differenza tra una gricia “come se deve” e una per turisti. E quando pensi a lui ti assale una nostalgia buona."
+      ],
+      "sections": [
+        {
+          "title": "🍝 Trattorie storiche e Osterie moderne",
+          "items": [
+            {
+              "name": "Pecorino"
+            },
+            {
+              "name": "Flavio al Velavevodetto"
+            },
+            {
+              "name": "Jole"
+            },
+            {
+              "name": "Lo scopettaro"
+            },
+            {
+              "name": "Taverna Volpetti"
+            },
+            {
+              "name": "Conciabocca"
+            }
+          ]
+        },
+        {
+          "title": "🍕 Pizza & Street Food",
+          "items": [
+            {
+              "name": "Il Grottino a Testaccio"
+            },
+            {
+              "name": "Trapizzino Testaccio"
+            },
+            {
+              "name": "CasaManco",
+              "desc": "pizza al taglio"
+            },
+            {
+              "name": "Le mani in pasta",
+              "desc": "pastificio"
+            }
+          ]
+        },
+        {
+          "title": "🍷 Aperitivi / Enoteche",
+          "items": [
+            {
+              "name": "L'oasi della birra – Enoteca Palombi"
+            },
+            {
+              "name": "Salumeria Volpetti"
+            },
+            {
+              "name": "Vinificio"
+            },
+            {
+              "name": "Angelina"
+            }
+          ]
+        },
+        {
+          "title": "🍩 Colazioni / Merende / Gelati",
+          "items": [
+            {
+              "name": "Tram Depot",
+              "desc": "specialty coffee"
+            },
+            {
+              "name": "Pasticceria Barberini"
+            },
+            {
+              "name": "Linari",
+              "desc": "maritozzo con panna"
+            },
+            {
+              "name": "Il Maritozzaro"
+            },
+            {
+              "name": "Panna & Co",
+              "desc": "gelateria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fiumicino",
+      "title": "Fiumicino",
+      "emoji": "⚓",
+      "color": "azzurro",
+      "teaser": "“Te porto a mangià a Fiumicino” è una dichiarazione d'amore.",
+      "intro": [
+        "Fiumicino, piccolo comune laziale affacciato sul Mar Tirreno, è considerato la porta di ingresso di Roma, con un aeroporto internazionale che la collega al resto del mondo. Da diversi anni ormai questa località è diventata anche un importante polo gastronomico, simbolo della buona cucina e della valorizzazione del territorio.",
+        "Via della Torre Clementina, un susseguirsi di locali di street food e ristoranti lungo il fiume, è stata ufficialmente dichiarata la strada gourmet d'Italia 🇮🇹",
+        "Insomma, “te porto a mangià a Fiumicino” per noi romani è letteralmente una dichiarazione d'amore 🧡",
+        "Qui trovate i miei indirizzi del cuore per delle esperienze gastronomiche interessanti, magari in una bella giornata di sole, con tanti must-try per gli amanti della cucina di pesce e non solo."
+      ],
+      "sections": [
+        {
+          "title": "⭐ Stellati / Gourmet",
+          "items": [
+            {
+              "name": "Il Tino"
+            },
+            {
+              "name": "Pascucci al Porticciolo"
+            },
+            {
+              "name": "L'osteria dell'orologio"
+            }
+          ]
+        },
+        {
+          "title": "🐟 Bistrot di pesce",
+          "items": [
+            {
+              "name": "QuarantunoDodici"
+            },
+            {
+              "name": "La Marina"
+            },
+            {
+              "name": "Salotto Valadier"
+            },
+            {
+              "name": "Mare Bistrot"
+            },
+            {
+              "name": "Le Brocchette"
+            },
+            {
+              "name": "Ippolito"
+            },
+            {
+              "name": "Educazione Marinara"
+            },
+            {
+              "name": "AltaVela"
+            }
+          ]
+        },
+        {
+          "title": "🍕 Pizza & Street Food",
+          "items": [
+            {
+              "name": "Sancho",
+              "desc": "pizza al taglio"
+            },
+            {
+              "name": "Pizza al porto",
+              "desc": "pizza al taglio"
+            },
+            {
+              "name": "Ge.Pa.Gi."
+            },
+            {
+              "name": "Supplì Bros"
+            },
+            {
+              "name": "Vero",
+              "desc": "street food"
+            }
+          ]
+        },
+        {
+          "title": "🍷 Aperitivi / Enoteche",
+          "items": [
+            {
+              "name": "Reef Village"
+            },
+            {
+              "name": "Azul"
+            }
+          ]
+        },
+        {
+          "title": "🌍 Cucine dal mondo",
+          "items": [
+            {
+              "name": "La Marina Sushi Bar"
+            },
+            {
+              "name": "The Lounge BacchuSushi"
+            },
+            {
+              "name": "Home Cooking",
+              "desc": "cucina cinese"
+            },
+            {
+              "name": "Sushi e Tacos by Damiano"
+            },
+            {
+              "name": "Casa Carmen",
+              "desc": "cucina spagnola"
+            }
+          ]
+        },
+        {
+          "title": "🥐 Pasticcerie / Forni",
+          "items": [
+            {
+              "name": "Patrizi",
+              "desc": "pasticceria e gelateria"
+            },
+            {
+              "name": "Microforno Luca Pezzetta"
+            },
+            {
+              "name": "Sergio's by Rustichelli"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "guideFood": [
+    {
+      "slug": "lazio-autunno",
+      "title": "6 ristoranti per gite nel Lazio in autunno",
+      "emoji": "🍂",
+      "color": "terracotta",
+      "teaser": "Mangiare bene, respirare aria fresca e tornare a casa col cuore pieno.",
+      "intro": [
+        "La domenica ideale: mangiare bene, respirare aria fresca e tornare a casa con le scarpe sporche di terra e il cuore pieno."
+      ],
+      "sections": [
+        {
+          "title": "Gli indirizzi",
+          "items": [
+            {
+              "name": "La Faggeta",
+              "place": "Soriano nel Cimino",
+              "desc": "Tra i faggi secolari e i colori più belli del Lazio, un ristorante immerso nella natura che profuma di bosco e tradizione. Piatti rustici, funghi, tartufo e pasta fatta in casa. Dopo pranzo, una passeggiata tra castagne e tappeti di foglie dorate è d'obbligo."
+            },
+            {
+              "name": "Cristallo di Neve",
+              "place": "Subiaco",
+              "desc": "Un rifugio caldo e genuino ai piedi dei monti Simbruini. Antipasti della casa strepitosi, polenta, selvaggina e vino rosso. Poi, una passeggiata fino al monastero di San Benedetto o lungo l'Aniene, immersi nei colori."
+            },
+            {
+              "name": "La Locanda delle Cicale",
+              "place": "Canale Monterano",
+              "desc": "Casale di pietra, atmosfera bucolica e menù che cambia con le stagioni. Funghi, zuppe cremose, carni alla brace e dolci fatti in casa. Dopo pranzo, scopri la Riserva di Monterano, con le sue rovine tra muschio e silenzio."
+            },
+            {
+              "name": "Antica Trattoria del Borgo",
+              "place": "Caprarola",
+              "desc": "Cucina casalinga, porzioni generose e vista mozzafiato sul borgo. Da provare la zuppa di castagne, le fettuccine ai funghi e i dolci della casa. A due passi dal Palazzo Farnese e dai suoi giardini, spettacolari in questa stagione."
+            },
+            {
+              "name": "L'Orto di Hans",
+              "place": "Soriano nel Cimino",
+              "desc": "Un agriturismo intimo, immerso nel verde, perfetto per i veri amanti dell'autunno. Cucina stagionale con prodotti dell'orto e atmosfera calda e accogliente. Piatti di conforto a base di porcini, finferli, zucca e castagne. Dopo pranzo una passeggiata nella campagna circostante."
+            },
+            {
+              "name": "Azienda Agricola Le Rose",
+              "place": "Genzano di Roma",
+              "desc": "Un ristorante circondato da vigneti. Tavoli in legno, atmosfera rustica ma elegante, prodotti a km 0. Formaggi, salumi, pane caldo e ottimi vini di produzione propria. Il menu prevede anche tante buone opzioni vegetariane e una versione punk della carbonara. Dopo pranzo, una camminata tra i castelli e il lago di Nemi: pura poesia d'autunno."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "colazioni",
+      "title": "30 colazioni imperdibili a Roma",
+      "emoji": "🥐",
+      "color": "rosa",
+      "teaser": "Perché la giornata comincia davvero solo dopo un pasto gustoso.",
+      "intro": [
+        "Roma si sveglia tra brioche fragranti, caffè di livello e croissant sfogliati a regola d'arte. Quelli che quando li addenti fanno le briciole.",
+        "Questa guida raccoglie 30 colazioni da non perdere, scelte per qualità, personalità e attenzione ai dettagli. Dal banco di una boulangerie contemporanea al tavolo silenzioso di un bar vecchio stile, ogni indirizzo ha qualcosa da dire.",
+        "Per chi come me crede che la giornata cominci davvero solo dopo un pasto gustoso."
+      ],
+      "sections": [
+        {
+          "title": "I 30 indirizzi",
+          "grid": true,
+          "items": [
+            {
+              "name": "Cafè Merenda"
+            },
+            {
+              "name": "Grani Farine e Cafè"
+            },
+            {
+              "name": "Marzapane"
+            },
+            {
+              "name": "Gastromario"
+            },
+            {
+              "name": "Mae Prati"
+            },
+            {
+              "name": "Nero Vaniglia"
+            },
+            {
+              "name": "Love"
+            },
+            {
+              "name": "Barnum"
+            },
+            {
+              "name": "Bap"
+            },
+            {
+              "name": "Le Levain"
+            },
+            {
+              "name": "Casa Manfredi"
+            },
+            {
+              "name": "Coromandel"
+            },
+            {
+              "name": "Faro"
+            },
+            {
+              "name": "Luna"
+            },
+            {
+              "name": "Julietta"
+            },
+            {
+              "name": "Charlotte"
+            },
+            {
+              "name": "Forno Conti"
+            },
+            {
+              "name": "Giuffrè"
+            },
+            {
+              "name": "Madeleine"
+            },
+            {
+              "name": "Cristalli di Zucchero"
+            },
+            {
+              "name": "Maat"
+            },
+            {
+              "name": "Forno Ritono"
+            },
+            {
+              "name": "MokaMilk"
+            },
+            {
+              "name": "Le Carré Français"
+            },
+            {
+              "name": "Tulipane"
+            },
+            {
+              "name": "Snug The Comfort Cafe"
+            },
+            {
+              "name": "Mammò"
+            },
+            {
+              "name": "Slow"
+            },
+            {
+              "name": "Diciassette Bakery"
+            },
+            {
+              "name": "Rever",
+              "desc": "Albano Laziale"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "colazioni-dal-mondo",
+      "title": "Colazioni dal mondo (a Roma)",
+      "emoji": "🌍",
+      "color": "oliva",
+      "teaser": "Quattro indirizzi, quattro viaggi diversi, un'unica città.",
+      "intro": [
+        "A Roma c'è chi inizia la giornata con un espresso distratto al bancone e chi sceglie di attraversare il mondo a piccoli morsi.",
+        "Quattro indirizzi, quattro viaggi diversi, un'unica città che non smette di farci volare con la fantasia."
+      ],
+      "sections": [
+        {
+          "title": "I quattro viaggi",
+          "items": [
+            {
+              "name": "La colazione berbera al Clivo Bistrot",
+              "place": "Monteverde",
+              "desc": "A Monteverde il mattino ha i profumi d'Africa del Nord: focaccine calde con miele e burro salato, pane alla curcuma, biscottini della tradizione, spremuta d'arancia e l'immancabile tè alla menta. Un'offerta semplice ma piena di sapori, l'incontro perfetto tra Roma e il Maghreb. (Ps. necessario prenotarla in anticipo.)"
+            },
+            {
+              "name": "La pasticceria cinese da Zhi Zhi Cake",
+              "place": "Colli Albani",
+              "desc": "Minuscolo laboratorio di autentica pasticceria cinese, il primo di Roma, aperto nel 2022. Sul bancone si trovano ogni giorno monoporzioni generose, rolls alla panna fresca e mango, torte al durian, dolcetti al sesamo e alle castagne. Da bere diversi tipi di caffè caldo o freddo e tante versioni di bubble tea. C'è anche una sede in zona Tuscolana, più accogliente e adatta alla consumazione sul posto per due chiacchiere con un'amica."
+            },
+            {
+              "name": "I profumi della Svezia da Mae",
+              "place": "Prati",
+              "desc": "Nel cuore caotico di Roma, in zona Prati, un indirizzo lond-nordico nel panorama delle colazioni lente. Tra le proposte in carta è sempre presente un angolino di Svezia che profuma di brioche appena sfornate alla cannella (i famosi kanelbullar) e bun allo zafferano. Caffè rigorosamente specialty e interessanti alternative salate."
+            },
+            {
+              "name": "Colazione giapponese da Hiromi Cake",
+              "place": "Prati",
+              "desc": "Una pasticceria moderna che celebra i sapori del Sol Levante, tra melonpan, rolls e monoporzioni sofficissime con pan di spagna, chantilly e frutta fresca. Se vi piace il salato troverete anche dei deliziosi onigiri da consumare insieme a una bevanda fresca oppure a un matcha di qualità. Menzione speciale per i mochi, tra i più buoni di Roma sia in versione classica con la marmellata di fagioli rossi, sia più freschi aromatizzati allo yuzu."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "viaggi": [
+    {
+      "slug": "tokyo",
+      "title": "Tokyo",
+      "emoji": "🗼",
+      "color": "rosa",
+      "teaser": "La città dai mille volti: una tempesta silenziosa e un caos calmo.",
+      "intro": [
+        "Tokyo non è mai una sola cosa: è un mosaico di anime che convivono.",
+        "È il salaryman che prende la metro all'alba con lo sguardo assorto nei pensieri e la 24 ore stretta in mano. È il nonno che porta la nipotina per mano a vedere la fioritura dei ciliegi al Parco di Ueno. È la ragazza che cammina veloce in skinny jeans e cuffie nelle orecchie, sognando il prossimo appuntamento con il ragazzo che le piace. È il businessman che dopo il lavoro si scioglie la cravatta e ride con i colleghi in un izakaya affollato.",
+        "Tokyo è una tempesta silenziosa e un caos calmo: ti travolge con le sue luci, ma sa regalare poesia negli scorci nascosti, tra un vicolo antico e un giardino."
+      ],
+      "sections": [
+        {
+          "title": "🔎 Cosa vedere",
+          "items": [
+            {
+              "name": "Shinjuku",
+              "desc": "Grattacieli, luci al neon e vita notturna. Troppo carino il gatto 3D in cima ad un palazzo: vi lascerà col naso all'insù."
+            },
+            {
+              "name": "Palazzo Imperiale",
+              "desc": "Antica residenza del castello di Edo, oggi residenza ufficiale dell'imperatore. L'accesso è limitato ma i giardini orientali sono splendidi, con resti storici e alberi simbolo delle province del Giappone."
+            },
+            {
+              "name": "Ginza",
+              "desc": "Elegante quartiere dello shopping di lusso, tra grandi brand e architetture avveniristiche."
+            },
+            {
+              "name": "Mercato del pesce di Tsukiji",
+              "desc": "Un enorme mercato all'aperto dove si trova lo street food più delizioso. Accessibile dalle 9 alle 15, è il luogo giusto per assaggiare sushi freschissimo, spiedini, mochi, omelette su stecco e i celebri cracker di polpo."
+            },
+            {
+              "name": "Jinbocho",
+              "desc": "Il quartiere delle librerie, con oltre 200 negozi tra manoscritti antichi e libri usati. Perfetto per un regalo originale."
+            },
+            {
+              "name": "Kappabashi-dori (Asakusa)",
+              "desc": "La via degli utensili da cucina: coltelli pregiati, ciotole, teiere, tazze, vaporiere e wok. Un paradiso per foodie e appassionati di cucina."
+            },
+            {
+              "name": "Poetry Café FUTO (Taito)",
+              "desc": "Piccolo locale romantico dove si scrive una lettera a sé stessi che verrà spedita dopo un anno. Nel frattempo, tè o caffè con dolcetti. Un ricordo unico da portare a casa."
+            }
+          ]
+        },
+        {
+          "title": "🥢 Dove mangiare",
+          "paras": [
+            "Tokyo è il posto perfetto per improvvisare: ovunque troverete ottimo cibo, per tutti i gusti e tutte le tasche. A volte c'è fila, ma se mangiate presto (rispetto agli orari occidentali) vi siederete facilmente. Seguite l'istinto e non sbaglierete."
+          ],
+          "items": [
+            {
+              "name": "Melonpan di Kagetsudo",
+              "place": "Asakusa",
+              "desc": "Caldo, enorme, irresistibile. Da provare assolutamente all'apertura, ripieno di panna."
+            },
+            {
+              "name": "Standing sushi Maguro Bito",
+              "place": "Asakusa",
+              "desc": "Sushi freschissimo e sakè, consumato in piedi davanti al sushi man. Preparato sul momento."
+            },
+            {
+              "name": "Korokke di Menchi",
+              "place": "Asakusa",
+              "desc": "Le crocchette virali da strada."
+            },
+            {
+              "name": "Ichiran Ramen",
+              "place": "in tutta la città",
+              "desc": "Catena famosissima, si mangia in postazioni singole, ramen personalizzabile. Esperienza da fare, ramen davvero ottimo. (Io sono stata a Shinjuku.)"
+            },
+            {
+              "name": "Furaikyo",
+              "place": "Shinjuku",
+              "desc": "Ramen cremoso, brodi intensi, noodles perfetti."
+            },
+            {
+              "name": "Lashowhan",
+              "place": "Shibuya",
+              "desc": "Zuppe e noodles piccanti (attenzione, lo spicy è davvero spicy)."
+            },
+            {
+              "name": "Harajuku Gyozaro",
+              "place": "Harajuku",
+              "desc": "Spartano, local, solo gyoza di maiale cucinati alla perfezione."
+            },
+            {
+              "name": "Street food al mercato di Tsukiji",
+              "desc": "Mochi, omelette giapponesi, cracker di polpo, dolci e pesce fresco. Da provare anche i mitarashi dango: spiedini glutinosi glassati con salsa di soia dolce."
+            },
+            {
+              "name": "Extra",
+              "desc": "Gli onigiri dei konbini sono compagni irrinunciabili di fine serata prima di andare in hotel. E gli ekiben, i bento da comprare in stazione, sono un rituale immancabile da gustare caldi sul treno proiettile (Shinkansen)."
+            }
+          ]
+        },
+        {
+          "title": "🏠 Dove alloggiare (e qualche consiglio sparso)",
+          "paras": [
+            "Tokyo è una delle metropoli più grandi e popolose al mondo. Pensare di poterla “vedere tutta” è impossibile: meglio suddividere la città in quadranti e visitare 1-2 quartieri al giorno.",
+            "Camminare senza meta è bellissimo, ma a Tokyo le distanze sono enormi. Usate la metropolitana, sarà la vostra migliore alleata. Procuratevi una carta ricaricabile (Suica o Pasmo): velocizza gli accessi ai tornelli ed evita perdite di tempo.",
+            "Per dormire, qualsiasi zona va bene: scegliete in base ai vostri gusti. Io, ad esempio, ho trovato Shibuya troppo caotica e ho preferito Asakusa, vivace di giorno e residenziale la sera. L'unica regola d'oro: scegliete un hotel vicino a una stazione metro. Vi tornerà comodo anche per l'aeroporto.",
+            "Un'opzione affidabile è la catena APA Hotels: camere compatte, pulizia impeccabile, standard uniformi (spesso con lavanderia interna). La colazione non è indispensabile: i konbini (7Eleven, Family Mart, Lawson), i cafè e le botteghe dolciarie accanto ai templi vi offriranno ogni giorno una colazione diversa e deliziosa.",
+            "Ricordatevi: a Tokyo ogni quartiere è una città nella città, con la sua identità, i suoi sapori e i suoi colori."
+          ]
+        },
+        {
+          "title": "🛍️ Shopping",
+          "paras": [
+            "Tokyo è un paradiso dello shopping: si trova davvero di tutto, dall'artigianato tradizionale alle ultime tendenze fashion. Ogni quartiere ha il suo carattere e vale la pena curiosare senza fretta."
+          ],
+          "items": [
+            {
+              "name": "Souvenir tradizionali",
+              "desc": "Nei dintorni del Senso-ji ad Asakusa troverete botteghe piene di ventagli, incensi meravigliosi, stampe, quaderni in carta di riso e piccoli oggetti che raccontano la cultura giapponese. Non dimenticate i timbri (goshuin): li trovate nei templi e perfino in alcune stazioni della metro, perfetti per collezionare ricordi del vostro viaggio."
+            },
+            {
+              "name": "Dolci & sfizi da portare a casa",
+              "desc": "Dai mochi ripieni al cioccolato fino alle mitiche edizioni limitate dei Kit Kat (sakura, tè di Natale, wasabi e mille altri gusti impensabili). Un regalo divertente e facile da trasportare. Nei mercati e nei grandi magazzini troverete anche spezie per ramen, bacchette in legno e tante chicche gastronomiche."
+            },
+            {
+              "name": "Moda e tessuti",
+              "desc": "Ci sono diversi negozi di denim giapponese per dei jeans di altissima qualità. Consiglio Hinoya (Ueno)."
+            },
+            {
+              "name": "Don Quijote",
+              "desc": "Il tempio del caos e del divertimento, aperto spesso 24h. Ci si perde per ore tra gadget assurdi, snack, cosmetici e travestimenti. Carino anche Muji e, se vi piace Uniqlo, troverete tanti superstore fornitissimi."
+            },
+            {
+              "name": "Skincare & beauty",
+              "desc": "La cosmetica giapponese è ovunque, dai konbini alle farmacie: creme, maschere e detergenti ottimi a prezzi bassissimi. Da fare scorta!"
+            },
+            {
+              "name": "Occhiali",
+              "desc": "Da J!NS si rifanno davvero a prezzi incredibili: controllo della vista con strumenti all'avanguardia, scelta della montatura e occhiali pronti in poche ore (o un paio di giorni per lenti particolari). Una sorpresa piacevole e utilissima."
+            }
+          ]
+        },
+        {
+          "title": "🎁 Consigli bonus",
+          "items": [
+            {
+              "name": "Assicurazione sanitaria",
+              "desc": "Sì, fatela! Le spese mediche possono essere elevate. Noi ci siamo affidate a Columbus."
+            },
+            {
+              "name": "Veg o vegetariani",
+              "desc": "Non sempre è facilissimo, ma con l'app Happy Cow troverete locali veg-friendly intorno a voi con geolocalizzazione."
+            },
+            {
+              "name": "Silenzio sui mezzi pubblici",
+              "desc": "Sui treni e in metro non si parla al telefono. Mettete il cellulare in modalità silenziosa e godetevi il viaggio."
+            },
+            {
+              "name": "Snack da passeggio",
+              "desc": "Evitate di mangiare mentre camminate. È buona norma consumare il cibo davanti alla bancarella che lo vende e riconsegnare lì gli scarti. I cestini per strada sono rari."
+            },
+            {
+              "name": "Niente foto alle persone a loro insaputa",
+              "desc": "Anche se lo scatto vi sembra bello, per i giapponesi è una forte violazione della privacy."
+            },
+            {
+              "name": "Traduzioni smart",
+              "desc": "Scaricate un'app per tradurre dall'italiano al giapponese. Molte funzionano anche con fotocamera o note vocali: perfette per leggere i menu o farsi capire con gentilezza."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kyoto",
+      "title": "Kyoto",
+      "emoji": "⛩️",
+      "color": "terracotta",
+      "teaser": "Una città che è poesia pura: caos e grazia, spiritualità ed esteriorità.",
+      "intro": [
+        "Kyoto è una vecchia signora coi capelli d'argento che profumano di fiori di ciliegio. Una bellezza regale, segnata dal tempo, che non ha bisogno di parlare per farsi notare.",
+        "All'alba respira piano: si sente solo l'acqua del torrente sotto i ponticelli e il rumore delle ciabatte di legno sulle pietre. Dentro le case, le famiglie si riuniscono a mangiare in silenzio. Fuori, una maiko corre veloce con un ombrellino tra le mani, schivando gli sguardi curiosi. Le botteghe aprono piano piano, srotolando tessuti preziosi mentre i profumi di miso e dashi si mescolano nell'aria.",
+        "Il Nishiki Market si risveglia con voci, sfrigolii e vapori. La sera si concede un ballo lento mentre il sole tramonta sui vicoli di Gion e le sue case in legno. Kyoto è caos e grazia, spiritualità ed esteriorità. È il fascino quieto e luminoso di un'anima speciale."
+      ],
+      "sections": [
+        {
+          "title": "🔎 Cosa vedere",
+          "items": [
+            {
+              "name": "Fushimi Inari",
+              "desc": "Un tunnel infinito di torii rossi che si arrampicano sulla montagna tra i boschi. Un cammino lento, silenzioso e un po' magico."
+            },
+            {
+              "name": "Arashiyama",
+              "desc": "Una foresta di bambù che ondeggia piano mentre la luce filtra dagli alberi."
+            },
+            {
+              "name": "Kinkaku-ji (Padiglione d'Oro)",
+              "desc": "Un tempio scintillante che si specchia nell'acqua in un gioco di ombre preziose."
+            },
+            {
+              "name": "Ginkaku-ji (Padiglione d'Argento)",
+              "desc": "Più sobrio, più zen. Un luogo di pace."
+            },
+            {
+              "name": "To-ji Temple",
+              "desc": "Una pagoda di legno altissima, circondata da silenzio nel cuore della città."
+            },
+            {
+              "name": "Sentiero del Filosofo",
+              "desc": "Una passeggiata speciale tra ruscelli, alberi di ciliegio e foglie che in autunno si infuocano di sfumature rosse. Cercate bene e troverete anche delle piccole tea house e delle botteghe di kimono lungo la strada."
+            },
+            {
+              "name": "Nishiki Market",
+              "desc": "Il tempio dello street food, fumi e vapori invitanti, tra spiedini di carne, pesce fresco e mochi artigianali. Una festa per i sensi."
+            },
+            {
+              "name": "Gion e Pontocho",
+              "desc": "Vicoli stretti, lanterne rosse e, se siete fortunati, anche qualche geisha che passa veloce tra le casine di legno."
+            },
+            {
+              "name": "Kyomizu-dera",
+              "desc": "Uno dei templi più iconici del Giappone. Perfetta fusione tra architettura e natura."
+            }
+          ]
+        },
+        {
+          "title": "🥢 Dove mangiare",
+          "items": [
+            {
+              "name": "Curry & Tempura Koisus",
+              "place": "Gion",
+              "desc": "Un piccolo locale nel cuore di Gion dove mangiare riso con un curry speciale (di carne o vegetariano) composto da una miscela di 20 spezie accuratamente selezionate. Buonissima anche la tempura. Impiattamento stupendo. Non prende prenotazioni."
+            },
+            {
+              "name": "Wife and Husband",
+              "place": "Pontocho",
+              "desc": "Un locale poetico e minuscolo dove una coppia di coniugi serve unicamente caffè (speciale) e toast al formaggio, il migliore che assaggerete. Necessario prenotare con larghissimo anticipo."
+            },
+            {
+              "name": "Ippudo Ramen",
+              "place": "centro",
+              "desc": "Uno dei ramen più famosi della città e non solo. C'è sempre moltissima fila ma ne vale la pena."
+            },
+            {
+              "name": "Nishiki Warai",
+              "place": "centro",
+              "desc": "Locale dove servono un'ottima okonomiyaki al tavolo."
+            },
+            {
+              "name": "Ao Onigiri",
+              "desc": "Qui mangerete delle polpettine di riso ripiene davvero eccellenti. Al momento fa solo asporto."
+            },
+            {
+              "name": "Nishiki Market",
+              "desc": "Fermatevi a mangiare anche nelle bancarelle del mercato, dove troverete spiedini di carne, capesante alla fiamma, sushi, tantissimi dolci e souvenir gastronomici da portare a casa. Buonissimi anche i mochi alla frutta."
+            },
+            {
+              "name": "Tosuiro",
+              "place": "Gion",
+              "desc": "Qui potrete assaggiare il famoso tofu della zona in tante varianti e cotture differenti. Nel menù ci sono anche altre cose, ovviamente."
+            }
+          ]
+        },
+        {
+          "title": "🏠 Dove alloggiare",
+          "paras": [
+            "Sebbene siano le più affollate dai turisti, la zona di Gion e quella dei dintorni della stazione sono sicuramente le più comode per cercare un alloggio. Dormire qui, rispetto ad altre città del Giappone, è più costoso ma imprescindibile per visitare al meglio Kyoto e le sue infinite meraviglie. Io vi consiglio di restarci almeno 5 notti se potete, perché i templi sono tanti, tutti bellissimi e tutti immersi nella natura con possibilità di fare piccole escursioni.",
+            "Non è indispensabile cercare un hotel: ci sono anche molte case di host che mettono a disposizione stanze con bagno privato o condiviso, permettendovi di risparmiare un po' senza tralasciare comfort e pulizia.",
+            "A Kyoto è molto comodo spostarsi con gli autobus, che servono in modo capillare tutte le zone della città.",
+            "Se avete fame ma non vi va di fare file non preoccupatevi: i konbini (mini market aperti h24) vi salveranno la vita con pasti caldi gustosissimi, ottimi panini, onigiri e dolci favolosi per la colazione. Ce ne sono ogni 50 passi.",
+            "Vi consiglio di assaggiare anche il caffè specialty delle molte torrefazioni presenti a Kyoto: vi lascerà a bocca aperta. E se insieme al vostro caffè vi offrono una ciotolina con dentro qualcosa di marrone, molto probabilmente si tratta di gelatina di caffè, spesso accompagnata da un ciuffetto di panna. È deliziosa.",
+            "Nota importante: se avrete la fortuna di imbattervi in qualche maiko o qualche geisha, non fotografatele il volto senza prima chiederle il permesso. Si tratta per loro di una grande invasione della privacy.",
+            "Non portate con voi troppe cose: negli hotel in genere vengono messi a disposizione degli ospiti tantissimi prodotti per la cura del corpo di alta qualità: creme, maschere, balsami, calzini comodi, persino elastici per i capelli e il pigiama per dormire."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kanazawa",
+      "title": "Kanazawa",
+      "emoji": "🏯",
+      "color": "senape",
+      "teaser": "L'atmosfera di Kyoto, lontano dal turismo di massa.",
+      "intro": [
+        "Kanazawa è una gemma che ricorda l'atmosfera senza tempo di Kyoto, ma lontana dal turismo di massa.",
+        "Case tradizionali in legno, sale da tè e da sakè, luci soffuse che si riflettono nel canale: tutto sa di autenticità. Un equilibrio perfetto tra mare e Alpi giapponesi, tra passato e presente, veracità ed eleganza.",
+        "Famosa per la lavorazione della foglia d'oro, che impreziosisce l'artigianato locale e si può addirittura assaggiare sui dolcetti, sul riso e sul gelato.",
+        "Io ho davvero amato questa tappa durante il mio viaggio in Giappone e raccolgo qui alcuni suggerimenti che spero vi siano utili."
+      ],
+      "sections": [
+        {
+          "title": "🔎 Cosa vedere",
+          "items": [
+            {
+              "name": "Higashi Chaya",
+              "desc": "Il quartiere delle geishe, con case da tè storiche e scorci da cartolina."
+            },
+            {
+              "name": "Nagamachi",
+              "desc": "L'antico quartiere dei samurai, con una residenza tradizionale visitabile."
+            },
+            {
+              "name": "Mercato di Omicho",
+              "desc": "Per mangiare ottimo sushi, ma anche per osservare la vita locale e comprare prodotti unici."
+            },
+            {
+              "name": "Nishi Chaya",
+              "desc": "Più piccolo di Higashi, ma altrettanto affascinante."
+            },
+            {
+              "name": "Castello di Kanazawa",
+              "desc": "Bianco, imponente ed essenziale, in pieno stile giapponese."
+            },
+            {
+              "name": "Santuario Oyama",
+              "desc": "Un mix inaspettato tra stile giapponese e dettagli architettonici occidentali."
+            },
+            {
+              "name": "Kenroku-en",
+              "desc": "Tra i giardini più spettacolari del Giappone, che cambiano veste in ogni stagione."
+            },
+            {
+              "name": "Stazione di Kanazawa",
+              "desc": "Un gioiello di architettura moderna, ma radicato nella tradizione grazie all'imponente torii in legno."
+            }
+          ]
+        },
+        {
+          "title": "🥢 Dove mangiare",
+          "items": [
+            {
+              "name": "Sushi al mercato di Omicho",
+              "desc": "Un must. Il pesce viene pescato ogni giorno e servito freschissimo nelle piccole botteghe del mercato. Autentico, spartano e delizioso."
+            },
+            {
+              "name": "Hiramipan",
+              "desc": "Una delle migliori colazioni della città: bistrot in stile francese con la cura orientale."
+            },
+            {
+              "name": "Tamon",
+              "desc": "Fluffy pancakes serviti nel cuore del quartiere dei samurai. Perfetti con una limonata allo yuzu."
+            },
+            {
+              "name": "Izakaya Fuwari",
+              "desc": "Trattoria locale con atmosfera conviviale e piattini da dividere. Si cena al bancone."
+            },
+            {
+              "name": "Ramen Taiga",
+              "desc": "Preparatevi a lunghe attese, ma ne vale assolutamente la pena."
+            }
+          ]
+        },
+        {
+          "title": "🏠 Dove alloggiare",
+          "items": [
+            {
+              "name": "The Square Hotel Kanazawa",
+              "desc": "Moderno ed elegante con richiami alla tradizione, prezzi ottimi e un piccolo onsen per gli ospiti."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "minorca",
+      "title": "Minorca",
+      "emoji": "🌴",
+      "color": "azzurro",
+      "teaser": "La Isla del Viento: la più selvaggia delle Baleari.",
+      "intro": [
+        "Dichiarata dall'Unesco Patrimonio della Biosfera, Minorca è forse la meno famosa e la più selvaggia delle Baleari.",
+        "Con le sue insenature rocciose che, come fiordi, rivelano acque cristalline, le sue pinete rigogliose aggrappate alle scogliere e i villaggi di pescatori con le case di un bianco splendente, Minorca è l'isola giusta per gli amanti dell'avventura.",
+        "L'accesso alle spiagge va spesso guadagnato con camminate più o meno brevi nella vegetazione e alcune delle cale più famose hanno accesso contingentato dal parcheggio per preservare l'ambiente. Bisogna quindi svegliarsi presto al mattino oppure spostarsi a piedi utilizzando i sentieri che collegano tutta la costa.",
+        "Mahón, la capitale, si trova a sud dell'isola: è molto carina e vivibile. Suggerisco però di usare come base Ciutadella, la città vecchia a nord, con una bella cattedrale in stile gotico-catalano, vicoli pittoreschi, botteghine per lo shopping e tanti ristoranti."
+      ],
+      "sections": [
+        {
+          "title": "🌴 Spiagge",
+          "paras": [
+            "Si contendono il primato di cala più bella le due sorelle Cala Turqueta e Cala Macarella, a sud dell'isola. Famosissima tra i ragazzi amanti dei tuffi è Cala en Brut, una lingua di mare turchese circondata da roccia alta.",
+            "Se siete amanti della spiaggia di sabbia io vi consiglio Son Saura e la bellissima Playa de Algaierens, con la sua acqua dai riflessi incredibili: vi sembrerà di nuotare in una piscina. Le spiagge non sono quasi mai attrezzate ma capita di incontrare dei venditori ambulanti di acqua e di frutta fresca sbucciata per voi sul momento, come ananas e mango."
+          ]
+        },
+        {
+          "title": "✨ Esperienze",
+          "paras": [
+            "L'isola è abbastanza grande e ci sono tante cose da fare oltre ad andare al mare."
+          ],
+          "items": [
+            {
+              "name": "Caseificio Mahón-Menorca DOP",
+              "desc": "Se siete foodies e amate scoprire la gastronomia locale non potete non visitare il caseificio del formaggio Mahón, prodotto sull'isola e servito spesso come aperitivo saporito."
+            },
+            {
+              "name": "Distilleria Xoriguer",
+              "desc": "Da non perdere un mini tour della distilleria di gin più antica di Spagna e tra le più antiche del Mediterraneo, per un giro affascinante tra alambicchi, fornaci a legna e profumo di ginepro."
+            },
+            {
+              "name": "Bodega Binifadet",
+              "desc": "Sull'isola ci sono anche diverse cantine che producono vino. La più famosa, con un bellissimo ristorante nascosto tra i vigneti."
+            },
+            {
+              "name": "Es Mercadal",
+              "desc": "Il mio paesino preferito: tanti negozi carini, piccoli cafè per una sosta golosa, un mercatino contadino del giovedì sera con tanto artigianato locale e graziose case bianche con buoni ristoranti, tra cui il famosissimo Ca N'Olga, cucina tradizionale rivisitata in chiave moderna e gourmet. Molto carino anche il borgo dei pescatori Ferreries."
+            }
+          ]
+        },
+        {
+          "title": "🍴 Dove mangiare",
+          "items": [
+            {
+              "name": "Es Amarador",
+              "place": "porto di Ciutadella",
+              "desc": "Paella fantastica, tanti antipasti deliziosi e dolci scenografici in una location romantica. Ricordatevi di prenotare oppure mettetevi pazientemente in fila per il primo tavolo libero."
+            },
+            {
+              "name": "La Guitarra",
+              "place": "Ciutadella",
+              "desc": "Una tavernetta in pietra che vi stupirà con una cucina autentica e gustosa. Meravigliose le capesante alla piastra e le cozze con salsa alioli."
+            },
+            {
+              "name": "Maramao e Margot",
+              "place": "Ciutadella",
+              "desc": "Per le tapas, assolutamente da provare."
+            },
+            {
+              "name": "Herbera Bakery",
+              "desc": "Per la colazione: una delle sue pluripremiate ensaimadas, disponibili in infinite varianti. La più famosa contiene filamenti di zucca candita all'interno."
+            }
+          ]
+        },
+        {
+          "title": "💡 Tip",
+          "paras": [
+            "Invece della solita sangría provate la pomada, una bevanda freschissima e dissetante a base di ghiaccio tritato, gin prodotto localmente e succo di limone. 🍋"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bilbao-san-sebastian",
+      "title": "Bilbao & San Sebastián",
+      "emoji": "🇪🇸",
+      "color": "blu",
+      "teaser": "Paesi Baschi: pintxos, Guggenheim e la baia più famosa di Spagna.",
+      "intro": [
+        "Bilbao è una città che ti conquista con la sua anima industriale che negli anni si è evoluta per accogliere i visitatori e affascinarli con un perfetto mix di tradizione e modernità."
+      ],
+      "sections": [
+        {
+          "title": "🔎 Bilbao — Cosa vedere",
+          "items": [
+            {
+              "name": "Museo Guggenheim",
+              "desc": "Meraviglia architettonica che ha trasformato Bilbao in un'icona mondiale."
+            },
+            {
+              "name": "Casco Viejo",
+              "desc": "Il cuore storico della città, colorato, caotico e pieno di vita."
+            },
+            {
+              "name": "Mercado de la Ribera",
+              "desc": "Un paradiso per gli amanti del cibo locale."
+            },
+            {
+              "name": "Ponte di Vizcaya",
+              "desc": "Il primo ponte trasportatore al mondo, patrimonio dell'UNESCO. Capolavoro di ingegneria che unisce passato e presente, da attraversare per un'esperienza unica sul fiume Nervión."
+            }
+          ]
+        },
+        {
+          "title": "🍴 Bilbao — Dove mangiare",
+          "items": [
+            {
+              "name": "Iturriza Taberna",
+              "desc": "Intimo e accogliente a Plaza Nueva, con una vasta scelta di pintxos deliziosi a ottimi prezzi."
+            },
+            {
+              "name": "Café Bar Bilbao (Casa Pedro)",
+              "desc": "Atmosfera tradizionale, famoso per il bacalao pil pil e un bicchiere di txakoli, nel cuore della città vecchia."
+            },
+            {
+              "name": "Gure Toki",
+              "desc": "Pintxos gourmet in stile moderno, perfetti per chi cerca creatività e qualità premiata dalla Guida Michelin."
+            },
+            {
+              "name": "Café Iruña",
+              "desc": "Un'icona storica, ideale per una birra locale e un piatto di acciughe del Cantabrico in un ambiente dallo stile mudéjar."
+            },
+            {
+              "name": "Cork Bilbao",
+              "desc": "Un'enoteca dove scoprire vini eccellenti e assaporare specialità basche come la torta salata ripiena di cozze e verdure."
+            }
+          ]
+        },
+        {
+          "title": "🔎 San Sebastián (Donostia) — Cosa vedere",
+          "paras": [
+            "Una piccola perla sul mare, famosa per la sua eleganza e l'altissimo numero di ristoranti stellati."
+          ],
+          "items": [
+            {
+              "name": "La Concha",
+              "desc": "La baia più famosa della Spagna, una lunga spiaggia di sabbia dorata."
+            },
+            {
+              "name": "Città Vecchia e Basilica di Santa Maria del Coro",
+              "desc": "Con la sua stupenda facciata barocca."
+            },
+            {
+              "name": "Monte Igueldo",
+              "desc": "Una vista spettacolare sulla città e sulla costa dall'alto."
+            }
+          ]
+        },
+        {
+          "title": "🍴 San Sebastián — Dove mangiare",
+          "items": [
+            {
+              "name": "Bar Nestor",
+              "desc": "Conosciuto per la sua chuleta, la migliore bistecca della città."
+            },
+            {
+              "name": "Casa Vergara 1948",
+              "desc": "Bar di pintxos che sono piccole opere d'arte."
+            },
+            {
+              "name": "La Viña",
+              "desc": "Casa della famosa Basque Burnt Cheesecake, una cheesecake dalla superficie bruciacchiata e dal cuore cremoso che ha conquistato il mondo."
+            }
+          ]
+        },
+        {
+          "title": "✨ Extra",
+          "paras": [
+            "Se sei fan di Game of Thrones o semplicemente amante della natura non puoi perderti una gita a San Juan de Gaztelugatxe, meglio conosciuto come la Roccia del Drago! A soli 40 minuti da Bilbao, questo luogo incredibile ti regalerà una vista mozzafiato sulla natura selvaggia della costa basca tramite una lunga scalinata a picco sul mare che conduce a un eremo in cima all'isolotto."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "siviglia",
+      "title": "Siviglia",
+      "emoji": "💃",
+      "color": "terracotta",
+      "teaser": "Una gitana dai lunghi capelli neri che improvvisa un flamenco per strada.",
+      "intro": [
+        "Siviglia è una gitana dai lunghi capelli neri che improvvisa un flamenco per la strada, gli angolini del centro vecchio imbevuti del silenzio della siesta, un negozietto di ventagli in legno dipinti a mano con colori sgargianti, il suono di una chitarra che ti accompagna mentre cammini per i vicoli stretti, il profumo di cotture lente e il rumore del ghiaccio che tintinna in una brocca colma di sangria.",
+        "È una delle città della Spagna che ho preferito in assoluto, perfettamente visitabile in un week-end lungo."
+      ],
+      "sections": [
+        {
+          "title": "🔎 Cosa vedere",
+          "items": [
+            {
+              "name": "Real Alcázar",
+              "desc": "Palazzo reale con giardini stupendi e architettura mudéjar."
+            },
+            {
+              "name": "Cattedrale e Giralda",
+              "desc": "La più grande cattedrale gotica del mondo, con un campanile che offre una vista mozzafiato."
+            },
+            {
+              "name": "Plaza de España",
+              "desc": "La piazza più iconica della città, di forma semicircolare, con canali e ponti decorati con bellissime maioliche."
+            },
+            {
+              "name": "Barrio de Santa Cruz",
+              "desc": "Antico quartiere ebraico con vicoli pittoreschi e splendidi cortili fioriti."
+            },
+            {
+              "name": "Triana",
+              "desc": "Quartiere autentico noto per il flamenco e le ceramiche."
+            },
+            {
+              "name": "Setas (Metropol Parasol)",
+              "desc": "Un monumento in legno grandissimo dal design moderno che permette una vista interessantissima sulla città."
+            }
+          ]
+        },
+        {
+          "title": "🍴 Dove mangiare",
+          "items": [
+            {
+              "name": "Espacio Eslava",
+              "desc": "Tapas creative in un ambiente accogliente."
+            },
+            {
+              "name": "Azotea Sevilla",
+              "desc": "Specialità di mare con piatti come il polpo su patate. Se disponibile in menu, vi segnalo una corona di gamberi e spuma di mango pazzesca."
+            },
+            {
+              "name": "Casa Ricardo",
+              "desc": "Crocchette di baccalà e altre delizie in un'atmosfera tradizionale."
+            },
+            {
+              "name": "La Bartola",
+              "desc": "Il mio tapas bar preferito in assoluto. Le porzioni tapas sono abbondanti, deliziose ed economiche e permettono di assaggiare più pietanze."
+            },
+            {
+              "name": "La Campana",
+              "desc": "Storica gelateria e pastelería nota per dolci tipici come il Tocino de Cielo."
+            }
+          ]
+        },
+        {
+          "title": "🏠 Dove alloggiare",
+          "items": [
+            {
+              "name": "Barrio de Santa Cruz",
+              "desc": "Centrale e pittoresco, ideale per chi visita per la prima volta."
+            },
+            {
+              "name": "Triana",
+              "desc": "Autentico e meno turistico, perfetto per un'esperienza locale."
+            },
+            {
+              "name": "El Arenal",
+              "desc": "Vicino al centro e al fiume, comodo per esplorare la città."
+            },
+            {
+              "name": "Santa Catalina",
+              "desc": "Uno dei quartieri più centrali di Siviglia, prende il nome dalla chiesa di Santa Catalina. Vale la pena: vicinissima a Setas."
+            }
+          ]
+        },
+        {
+          "title": "💡 Tip",
+          "paras": [
+            "Per una coppia consiglio un piccolo appartamento nel cuore della città vecchia, dotato di ogni comfort: Sevilla Home Center. Lo trovate anche su booking.com."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "alsazia",
+      "title": "Alsazia",
+      "emoji": "🏘️",
+      "color": "oliva",
+      "teaser": "Vigneti dorati, botteghine e paesini da fiaba.",
+      "intro": [
+        "Regione francese affascinante, fortemente influenzata dalla sua vicinanza alla Germania e ricca di paesaggi pittoreschi e paesini da fiaba (SPOILER: uno di questi ha ispirato l'ambientazione de La Bella & la Bestia).",
+        "Molti scelgono di visitarla a Natale o in estate, ma il foliage la rende una meta perfetta per una fuga autunnale, tra vigneti dorati, botteghine e dimore storiche."
+      ],
+      "sections": [
+        {
+          "title": "✨ Colmar",
+          "paras": [
+            "È il punto di partenza ideale: scoprite la romantica Petite Venise, con i suoi viali acciottolati, i ponti e le caratteristiche case a graticcio. Visitate il mercato coperto per una zuppa calda e una incredibile selezione di formaggi, la Collegiata di San Martino e l'antica Maison des Têtes.",
+            "Non perdetevi un tè con torta da Au Croissant Doré e una pausa floreale a L'Entre Pot. Per un bicchiere di riesling, Le Café des Marchandes è il posto giusto."
+          ]
+        },
+        {
+          "title": "🚲 La Strada del Vino",
+          "paras": [
+            "Noleggiate una e-bike e percorrete la Strada del Vino, fermandovi a Eguisheim, un villaggio dalla originale pianta circolare con tante casette colorate, e Turckheim, piccolo borgo circondato da vigneti. Qui, godetevi un bicchiere di crémant e una tarte flambée da Gourmandises & Co.",
+            "Concludete il tour a Riquewihr, incantevole paesino che ha ispirato La Bella & la Bestia."
+          ]
+        },
+        {
+          "title": "✨ Strasburgo",
+          "paras": [
+            "Città dalle due anime che si fondono in una bellezza inaspettata. Perdetevi tra i canali di Petite France, gustate la zuppa di cipolle della vita al ristorante L'Oignon, un éclair fatto come si deve da L'Atelier 116, e ammirate la maestosa Notre-Dame de Strasbourg, con i suoi 142 metri di guglia in stile gotico.",
+            "Non dimenticate una gita in barca tra i canali, con una visuale privilegiata della chiesa di Saint-Paul."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lapponia",
+      "title": "Lapponia svedese (in inverno)",
+      "emoji": "❄️",
+      "color": "azzurro",
+      "teaser": "Una settimana al Circolo Polare Artico col naso all'insù.",
+      "intro": [
+        "I miei consigli di viaggio per una settimana al Circolo Polare Artico col naso all'insù, tra nuvole-arcobaleno, aurore boreali, renne, alci e tanta natura incontaminata coperta da un manto sofficissimo di neve.",
+        "Chi mi conosce lo sa: il mio cuore si incendia con il ghiaccio artico del grande Nord. Quello in Lapponia svedese è uno dei viaggi che mi hanno emozionato di più. La mia prima aurora boreale (e le tantissime altre a seguire), con le lacrime agli occhi per la gioia.",
+        "Molti non sanno che in questa regione all'estremo nord della Svezia ci sono le condizioni climatiche migliori in assoluto (anche rispetto a Norvegia e Finlandia) per poter avvistare l'aurora: clima secco, vasti spazi aperti e lontani dalle luci artificiali delle città, tanti laghi. Un mix che regala spesso cieli invernali tersi, perfetti per godere lo spettacolo delle northern lights 🎆",
+        "Ci sono due soluzioni: atterrare direttamente a Kiruna, risparmiando tempo per chi ha pochi giorni a disposizione, oppure — per i più avventurosi che non temono di dover guidare sulla neve — volare su Luleå, una graziosissima cittadina appena al di sotto del Circolo Polare, noleggiare un'auto e spostarsi a Kiruna, godendosi un tratto di strada di circa 4 ore e mezza tra alberi innevati, renne che camminano libere sul ciglio dei boschi e cieli pennellati di rosa.",
+        "Volare su Luleå è molto più economico che volare su Kiruna, idem per il noleggio auto. Noi abbiamo fatto Roma Fiumicino–Stoccolma (1 notte di sosta in hotel vicino all'aeroporto con navetta gratuita) e poi Stoccolma–Luleå, entrambe le tratte con Ryanair: costo totale per persona, incluso un bagaglio a mano extra, 132€. Noleggio auto 6 giorni con Alamo (ritiro in aeroporto a Luleå), inclusa assicurazione full coverage, 330€. Le auto hanno in dotazione quasi sempre pneumatici chiodati per poter guidare sulla neve. Il costo totale per persona di una settimana — tutto incluso, anche i voli — è stato di circa 1.200€."
+      ],
+      "sections": [
+        {
+          "title": "✨ Luleå",
+          "paras": [
+            "Molti la saltano e vanno direttamente a Kiruna in aereo, ma per me Luleå è stata l'opportunità migliore per conoscere la vita svedese. Una cittadina bella e vivace, piena di localini, cafè, gente che va in bicicletta con il sellino felpato.",
+            "La vera esperienza dello swedish fika si fa qui. Non ridete, che in Svezia il fika è una cosa seria: la pausa caffè e dolcetto è sempre una sosta prolungata per ripararsi dal freddo e scambiare chiacchiere e opinioni con le persone care, un vero evento sociale. Non potete non assaggiare i semla (simili ai nostri maritozzi ma con crema al marzapane insieme alla panna) e la kladdkaka, torta al cioccolato buonissima e leggermente appiccicosa, servita con panna e frutti rossi.",
+            "A Luleå abbiamo soggiornato in una casina nel bosco ma fronte mare con la sauna e, grazie ai deliziosi proprietari, abbiamo potuto fare sci di fondo nel bosco e abbiamo pattinato con lo slittino sul mare ghiacciato, che in inverno diventa un'estensione della città, dove le persone vanno a camminare coi cani o coi bimbi nel passeggino. In alcuni punti dove il ghiaccio è molto spesso si può persino guidare sul mare 😍",
+            "Vi consiglio tanto di visitare anche l'antico villaggio parrocchiale di Gammelstad per un tuffo nel passato, con le sue case rosse che spiccano nella neve e vi regaleranno scorci fantastici da fotografare.",
+            "Insomma, per me Luleå merita assolutamente una sosta se ne avete la possibilità, e guidare per quasi 5 ore da lì a Kiruna per noi è stata una parte speciale del viaggio."
+          ]
+        },
+        {
+          "title": "✨ Kiruna",
+          "paras": [
+            "Questa città di 20.000 abitanti situata nella contea di Norrbotten è la città più a nord della Svezia e sorge sopra una delle miniere di ferro più grandi al mondo, che però sta compromettendo la stabilità degli edifici. Da qualche anno è in atto un vero e proprio spostamento della città di circa 3 km più a est: praticamente una città che cammina, con un'opera mastodontica di letterale smontaggio e rimontaggio degli edifici storici. 😱",
+            "A Kiruna merita una visita l'Ice Hotel, un albergo fatto interamente di ghiaccio che potrebbe sembrare una cosa turistica ma al suo interno nasconde opere straordinarie create da artisti e scultori di tutto il mondo. Ogni anno i blocchi di ghiaccio, prima dell'inizio dell'estate, vengono restituiti al fiume Torne, per poi essere ripresi all'inizio dell'inverno successivo e ritrasformati in opere d'arte meravigliose. Si trova precisamente a Jukkasjärvi, a circa una decina di minuti da Kiruna.",
+            "A breve distanza da Kiruna (circa un'ora di auto) c'è anche il parco nazionale di Abisko, con una sky station per poter osservare l'aurora."
+          ]
+        },
+        {
+          "title": "🍴 Dove mangiare",
+          "paras": [
+            "Mangiare fuori è costoso e con poca scelta a Kiruna, perché si tratta di una cittadina piccola e poco popolata."
+          ],
+          "items": [
+            {
+              "name": "Arctic Thai and Grill",
+              "desc": "Ristorante thai buono, economico e con opzioni veg."
+            },
+            {
+              "name": "The Bishop Arms",
+              "desc": "Carinissimo pub con all'interno una piccola libreria. Posto super cozy, si mangia bene: panini, zuppe, fish & chips, birre locali, ottimi dolci. Sempre pieno, consiglio di prenotare."
+            },
+            {
+              "name": "STEJK Street Food",
+              "desc": "Molto carina l'esperienza della cena in un tipì, tipica tenda sami riscaldata e piena di lucine sul soffitto. Si mangia prevalentemente street food a base di carne e al centro della tenda c'è un bel fuoco per scaldare l'ambiente. Molto amato dai locals, quindi preparatevi a fare file."
+            },
+            {
+              "name": "Cene a casa",
+              "desc": "Una soluzione economica e pratica: nei supermercati trovate salmone selvaggio, tante aringhe, tante opzioni vegetali e taaanti dolci favolosi. Non perdetevi il succo di mirtillo rosso, da bere rigorosamente caldo."
+            }
+          ]
+        },
+        {
+          "title": "🏠 Dove alloggiare",
+          "paras": [
+            "Noi abbiamo trascorso 4 notti a Kiruna, suddivise tra le due zone migliori per avvistare l'aurora: Jukkasjärvi e Puoltsa. Le ultime 2 notti le abbiamo fatte a Luleå, in una meravigliosa casina nel bosco affacciata sulla riva del golfo di Botnia, con una distesa di mare ghiacciato davanti e una sauna privata che, vi dirò, è un plus mica da poco.",
+            "Noleggiare appartamenti vi permette di non dover per forza cenare fuori tutte le sere, risparmiando un bel po' di soldi che invece è possibile riversare sulle escursioni, a mio avviso imperdibili per godere in pieno l'essenza della vita lappone.",
+            "Se sceglierete casette un po' isolate (no worries, è un posto molto sicuro in termini di criminalità) potrete persino avvistare l'aurora direttamente da fuori casa, senza dover guidare con buio e freddo dopo cena.",
+            "Costo medio dei nostri pernottamenti: 80€ a notte in 2."
+          ]
+        },
+        {
+          "title": "🏞️ Escursioni",
+          "paras": [
+            "In Lapponia si possono fare gite in motoslitta, escursioni con slitte trainate da husky, aurora-safari di gruppo la sera… quest'ultima ve la sconsiglio, perché con moltissime probabilità, se siete muniti di auto, riuscirete a vedere l'aurora per conto vostro. Inoltre la sera fa davvero MOLTO freddo, quindi una gita notturna all'aria aperta potrebbe essere un po' estrema per alcuni.",
+            "Noi abbiamo fatto una ciaspolata molto carina organizzata da Kiruna Guidetour, con partenza dal centro città. Ci hanno dato loro tute da neve adeguate per il freddo, scarpe e ciaspole. Nella passeggiata una guida in lingua inglese ci ha raccontato di flora e fauna locali e delle abitudini del posto, e abbiamo avuto la fortuna di poter ammirare il fenomeno raro delle polar clouds: le nuvole arcobaleno che sembrano fatte di madreperla colorata. Pranzo incluso a base di zuppa calda, panini arrostiti al formaggio o salumi locali, cioccolata calda e biscotti. Costo più o meno 80€ per persona per circa 5 ore.",
+            "Argomento slitta con cani: noi eravamo molto titubanti sul farla o meno. Se ne trovano di tante fasce di prezzo. Alla fine, dopo tanto documentarci, ci siamo affidate ad un allevamento etico dove il benessere dei cani ha la priorità sulle attività turistiche: sono trattati come animali domestici e vengono amati e coccolati fino alla fine della loro vita, anche se a “riposo” da qualsiasi attività all'aria aperta. Il costo è stato più alto rispetto alla media ma ci ha dato l'opportunità di conoscere e legare col nostro gruppo di cani prima di iniziare l'avventura e dopo, provvedendo noi alla loro pappa e al gioco. È stata una giornata bellissima. Il tour operator si chiama Arctic Dog Sled, a Kiruna.",
+            "🔔 Nota importante: prenotare per 2 persone significa automaticamente che ognuno guiderà la propria slitta. Se invece preferite che una persona guidi e l'altra si goda il paesaggio comodamente seduta, contattate la struttura in anticipo e richiedete una slitta doppia condivisa."
+          ]
+        },
+        {
+          "title": "📌 Consigli sull'aurora",
+          "paras": [
+            "Attivate l'app Aurora Forecast e aspettate di ricevere la notifica, ma non disperate, perché a volte anche con scarsa attività solare la Lapponia svedese regala miracoli.",
+            "La prima volta è stata potentissima, verde intenso e danzante, e abbiamo letteralmente urlato e pianto di gioia per l'emozione. Su 6 notti nell'artico abbiamo ammirato 5 aurore meravigliose (una sola notte nevicava e non era possibile vederla).",
+            "Ricordatevi di stare lontani dalle fonti di luce artificiale e rivolgere lo sguardo sempre a nord. Portate con voi un thermos di tisana calda che vi aiuterà a non patire troppo il freddo mentre aspettate, anche se le macchine hanno i sedili che si riscaldano. Noi ci siamo spesso munite di iPad e thermos mentre aspettavamo il momento giusto in cui la dama verde si sarebbe palesata, ingannando il tempo con un filmetto.",
+            "Siate pazienti, abbiate fiducia. Se nella zona in cui vi trovate c'è qualche nuvola, spostatevi qualche km più in là, in posti aperti vicino a boschi e laghi. L'attesa sarà ripagata.",
+            "Jukkasjärvi è un posto speciale per vedere l'aurora, ma anche Luleå ce ne ha regalata una meravigliosa multicolore, proprio sopra al mare ghiacciato di fronte casa."
+          ]
+        },
+        {
+          "title": "📝 Consigli sparsi",
+          "paras": [
+            "Lasciate stare le maglie termiche e vestitevi di lana. Tanti tanti strati di lana buona o cachemire, materiali termoregolatori che vi aiuteranno a rimanere caldi. Le temperature in inverno arrivano fino a -20/-30, ma è un freddo secco, molto diverso da quello umido e pungente che ti fa battere i denti: si può affrontare se ben equipaggiati.",
+            "Invece dei guanti preferite delle ottime moffole in lana o in pelle imbottita di lana: le dita ravvicinate all'interno delle moffole genereranno calore da sole, meglio che coi guanti. Portate con voi delle solette autoriscaldanti da mettere negli scarponcini e anche i cuscinetti riscaldanti per le mani, soprattutto per la sera (si trovano anche da Decathlon). Giacca pesante da neve e pantaloni da neve idrorepellenti andranno bene. Anche un passamontagna potrebbe tornare utile quando sarete a caccia di aurora.",
+            "Le renne si avvistano spesso per strada. Noi addirittura avevamo un'alce che ci faceva visita la sera nella nostra casetta di Puoltsa: non spendete soldi per cercarne nei posti a pagamento.",
+            "Gennaio, febbraio e i primi di marzo sono mesi perfetti per questo tipo di viaggio."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "portogallo",
+      "title": "Portogallo on the road",
+      "emoji": "🚗",
+      "color": "senape",
+      "teaser": "12 giorni, 1200 km, 10 tappe (+1 bonus) tra nord e centro.",
+      "intro": [
+        "Itinerario di 12 giorni, circa 1200 km, 10 tappe (+1 bonus) tra nord e centro. Un viaggio per chi ama buon vino, natura selvaggia e città ricche di storia. Ecco le tappe che vi consiglio di non saltare."
+      ],
+      "sections": [
+        {
+          "title": "📍 Le tappe",
+          "items": [
+            {
+              "name": "Porto",
+              "desc": "Anima del nord, viva e suggestiva: azulejos, pastéis appena sfornati, scorci sul fiume Douro al tramonto, cantine di vino, piatti tipici e atmosfera autentica. Se amate Harry Potter questo è il vostro posto! (Almeno 2 notti.)"
+            },
+            {
+              "name": "Braga",
+              "desc": "La Stars Hollow portoghese, perfetta per una gita in giornata. Nei dintorni, il Santuario do Bom Jesus do Monte, secondo per importanza dopo Fatima."
+            },
+            {
+              "name": "Guimarães",
+              "desc": "Culla del Portogallo, borgo medievale incantevole e Patrimonio Unesco. 1 notte."
+            },
+            {
+              "name": "Parco do Gerês",
+              "desc": "Cascate, foreste e laghi cristallini: pura natura selvaggia. Almeno 1 notte se vi piace il trekking. NB: la strada da Gerês al Douro è spettacolare, tra gli scorci più belli del viaggio."
+            },
+            {
+              "name": "Valle del Douro",
+              "desc": "Una regione incredibilmente bella, tra colline di vigneti terrazzati a strapiombo sul fiume, da vivere con una crociera e tante degustazioni di vino porto. Suggerite almeno 2 notti, se possibile pernottando in una “quinta” (cantina locale)."
+            },
+            {
+              "name": "Coimbra",
+              "desc": "Città universitaria romantica. Mozzafiato la biblioteca Joanina. Cena con fado e sardine, tante salite e tante discese. 1 notte."
+            },
+            {
+              "name": "Tomar",
+              "desc": "La città dei Templari. Il Convento de Cristo vi lascerà senza parole."
+            },
+            {
+              "name": "Évora",
+              "desc": "Tempio romano, cappella delle ossa e un acquedotto spettacolare che si insinua tra le case bianche e gialle. Almeno 1 notte per goderla al meglio."
+            },
+            {
+              "name": "Óbidos",
+              "desc": "Incantevole borgo medievale perfetto per passeggiate tra vicoli fioriti, degustazione di ginjinha e acquisti di ceramiche dipinte a mano."
+            },
+            {
+              "name": "Aveiro",
+              "desc": "La Venezia portoghese da esplorare tra canali pittoreschi, imbarcazioni simili a gondole, dolcetti all'uovo e zuppe di crostacei. Suggerita 1 notte."
+            },
+            {
+              "name": "Nazaré (bonus)",
+              "desc": "Per vedere l'oceano nella sua forma più potente, tra le onde più alte del mondo. Gita di mezza giornata."
+            }
+          ]
+        },
+        {
+          "title": "💡 Note",
+          "paras": [
+            "Noi abbiamo scelto di saltare Lisbona e Sintra (più facilmente abbinabili all'Algarve) perché le avevamo già viste, e ci siamo concentrate sulla parte nord e sul centro del paese. I km non sono pochi ma le distanze sono piuttosto brevi: volo a/r Roma–Porto e, ogni volta che ci siamo spostate, abbiamo guidato per un massimo di 2h30 al giorno.",
+            "Un paese davvero stupendo, tutto da scoprire chilometro dopo chilometro. 🧡"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "porto",
+      "title": "Porto",
+      "emoji": "🍷",
+      "color": "blu",
+      "teaser": "Un week-end che sa di vino, sale e nostalgia buona.",
+      "intro": [
+        "Se Porto fosse una persona, sarebbe un vecchio elegante ma un po' sgualcito dal tempo, con un cappello sbiadito dal sole e le mani che profumano di vino e burro.",
+        "Camminerebbe lento tra salite sfidanti e discese ripide, avvolto da una luce calda che si riflette sugli azulejos. Ti accoglierebbe con il suono malinconico del fado che filtra dalle finestre, mentre in cucina soffrigge la cipolla per il bacalhau.",
+        "Porto è una città che non si trucca troppo, ma sa sedurti con poco: un bicchiere di vino verde ghiacciato, una carezza di vento dal Douro e quella bellezza imperfetta che resta addosso come un velo sottile.",
+        "Porto va vissuta piano. Non cercate di spuntare una lista: sedetevi, ascoltate la musica per strada, lasciatevi accarezzare dal vento e dal profumo dei dolci appena sfornati. È una città che vi entra sotto pelle, un po' malinconica e un po' magica. Un week-end qui sa di vino, sale e nostalgia buona."
+      ],
+      "sections": [
+        {
+          "title": "💡 Info pratiche",
+          "items": [
+            {
+              "name": "Quanto restare",
+              "desc": "Perfetta per un weekend di 2 o 3 giorni."
+            },
+            {
+              "name": "Come muoversi",
+              "desc": "Si gira comodamente a piedi (ma preparatevi ad avere il fiatone in salita!)."
+            },
+            {
+              "name": "Come arrivare",
+              "desc": "Collegata benissimo con voli diretti da Roma e Milano."
+            }
+          ]
+        },
+        {
+          "title": "🔎 Cosa vedere",
+          "items": [
+            {
+              "name": "Sé Catedral",
+              "desc": "La cattedrale gotica con un chiostro che lascia senza parole."
+            },
+            {
+              "name": "Stazione di São Bento",
+              "desc": "Gli azulejos più famosi del Portogallo (e l'ispirazione per Hogwarts!)."
+            },
+            {
+              "name": "Capela das Almas",
+              "desc": "Piccola chiesa tappezzata di piastrelle blu."
+            },
+            {
+              "name": "Igreja da Misericórdia e Igreja de São Francisco",
+              "desc": "Gioielli di stile e spiritualità."
+            },
+            {
+              "name": "Ponte Dom Luís I",
+              "desc": "Attraversatelo al tramonto: la vista è poesia."
+            },
+            {
+              "name": "Largo da Pena Ventosa",
+              "desc": "Casette colorate, panni stesi e scatti da cartolina."
+            },
+            {
+              "name": "Rua das Flores",
+              "desc": "La via perfetta per un caffè o un pastel de nata."
+            },
+            {
+              "name": "Livraria Lello",
+              "desc": "Bellissima, ma super affollata."
+            },
+            {
+              "name": "Palácio da Bolsa",
+              "desc": "Eleganza ottocentesca e sale spettacolari."
+            },
+            {
+              "name": "Passeggiata lungo la Ribeira",
+              "desc": "Colori, musica, bicchieri di vino e tramonti."
+            }
+          ]
+        },
+        {
+          "title": "🍴 Dove mangiare",
+          "items": [
+            {
+              "name": "Bufete Fase",
+              "desc": "La francesinha più famosa della città, ricca e piccante al punto giusto."
+            },
+            {
+              "name": "Santa Francesinha",
+              "place": "Vila Nova de Gaia",
+              "desc": "Versione vegana della mitica francesinha, sorprendentemente buona."
+            },
+            {
+              "name": "Taberna Santo António",
+              "desc": "Piccola, autentica, con cucina casalinga e vista sul Douro."
+            },
+            {
+              "name": "Adega São Nicolau",
+              "place": "Ribeira",
+              "desc": "Leggendaria per il baccalà e le crocchette di bacalhau."
+            },
+            {
+              "name": "Mariscaria",
+              "desc": "Perfetta per una cena di tapas di pesce e un calice di vino bianco fresco."
+            },
+            {
+              "name": "Casa Nanda e Taberna dos Mercadores",
+              "desc": "Intime, rustiche, vere."
+            },
+            {
+              "name": "Mercado do Bolhão o Mercado da Foz do Douro",
+              "desc": "Ideali per un pranzo tra bancarelle e profumi locali."
+            },
+            {
+              "name": "Soroast Coffee",
+              "desc": "Specialty coffee e design minimale."
+            },
+            {
+              "name": "Leitaria da Quinta do Paço",
+              "desc": "Il paradiso degli éclair con panna e cioccolato."
+            },
+            {
+              "name": "Manteigaria Fábrica de Pastéis",
+              "desc": "I migliori pastéis de nata, in Rua de Santa Catarina."
+            }
+          ]
+        },
+        {
+          "title": "🏠 Dove alloggiare",
+          "items": [
+            {
+              "name": "Baixa",
+              "desc": "Cuore pulsante, comodo, sicuro e mai troppo affollato."
+            },
+            {
+              "name": "Cedofeita",
+              "desc": "Più autentico e rilassato, pieno di gallerie e caffè."
+            }
+          ]
+        },
+        {
+          "title": "📖 Una citazione",
+          "paras": [
+            "“Le città del Portogallo sembrano la lista di cose di cui ha bisogno una sposa: qualcosa di vecchio, qualcosa di nuovo, qualcosa di prestato, qualcosa di blu.” — Mary McCarthy"
+          ]
+        }
+      ]
+    }
+  ]
+}
