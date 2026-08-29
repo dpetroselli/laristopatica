@@ -136,7 +136,7 @@ textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
     <input type="password" id="token-input" placeholder="Password">
     <button class="btn" id="token-save">Entra</button>
     <span class="status" id="login-status"></span>
-    <span class="muted" style="font-size:0.7rem">versione admin 4</span>
+    <span class="muted" style="font-size:0.7rem">versione admin 5</span>
   </div>
 </div>
 
@@ -567,8 +567,9 @@ async function start() {
 // dentro, cifrato); altrimenti si incolla direttamente il token.
 let secretBlob = null;
 async function loadSecret() {
+  // cache-buster: la CDN di GitHub Pages può ricordare per 10 minuti un vecchio 404
   try {
-    const r = await fetch("segreto.json", { cache: "no-store" });
+    const r = await fetch("segreto.json?nc=" + Date.now(), { cache: "no-store" });
     if (r.ok) secretBlob = await r.json();
   } catch {}
   if (!secretBlob) {
@@ -592,6 +593,13 @@ $("#token-save").addEventListener("click", async () => {
   const input = $("#token-input").value.trim();
   const ls = $("#login-status");
   if (!input) { ls.textContent = "Scrivi la password nel campo qui sopra."; ls.className = "status err"; return; }
+  if (!secretBlob && !/^(github_pat_|ghp_)/.test(input)) {
+    // in modalità token qualcuno sta scrivendo una password: probabile segreto.json non caricato
+    ls.textContent = "Non riesco a caricare la configurazione della password: ricarica la pagina tra un minuto e riprova.";
+    ls.className = "status err";
+    loadSecret();
+    return;
+  }
   ls.textContent = "Sblocco in corso…"; ls.className = "status";
   let token = input;
   if (secretBlob) {
