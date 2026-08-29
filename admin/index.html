@@ -136,7 +136,7 @@ textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
     <input type="password" id="token-input" placeholder="Password">
     <button class="btn" id="token-save">Entra</button>
     <span class="status" id="login-status"></span>
-    <span class="muted" style="font-size:0.7rem">versione admin 5</span>
+    <span class="muted" style="font-size:0.7rem">versione admin 6</span>
   </div>
 </div>
 
@@ -565,9 +565,10 @@ async function start() {
 
 // Se esiste admin/segreto.json l'accesso è con password (il token GitHub è lì
 // dentro, cifrato); altrimenti si incolla direttamente il token.
-let secretBlob = null;
+let secretBlob = window.SEGRETO || null; // incorporato nella pagina dalla build
 async function loadSecret() {
-  // cache-buster: la CDN di GitHub Pages può ricordare per 10 minuti un vecchio 404
+  if (secretBlob) return;
+  // ripiego: prova a scaricarlo (con cache-buster: la CDN può ricordare un vecchio 404)
   try {
     const r = await fetch("segreto.json?nc=" + Date.now(), { cache: "no-store" });
     if (r.ok) secretBlob = await r.json();

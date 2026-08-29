@@ -343,12 +343,17 @@ ${pages.map((p) => `  <url><loc>${site.domain}/${p === "index.html" ? "" : p}</l
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(path.join(DIST, "assets"), { recursive: true });
 fs.cpSync(path.join(ROOT, "assets"), path.join(DIST, "assets"), { recursive: true });
-// pannello admin online (salva su GitHub tramite API)
+// pannello admin online (salva su GitHub tramite API); il token cifrato
+// (creato da imposta-password.js) viene incorporato direttamente nella pagina
 fs.mkdirSync(path.join(DIST, "admin"), { recursive: true });
-fs.copyFileSync(path.join(ROOT, "admin", "index.html"), path.join(DIST, "admin", "index.html"));
-// token cifrato per l'accesso con password (creato da imposta-password.js)
+let adminHtml = fs.readFileSync(path.join(ROOT, "admin", "index.html"), "utf8");
 const segreto = path.join(ROOT, "admin", "segreto.json");
-if (fs.existsSync(segreto)) fs.copyFileSync(segreto, path.join(DIST, "admin", "segreto.json"));
+if (fs.existsSync(segreto)) {
+  const blob = JSON.stringify(JSON.parse(fs.readFileSync(segreto, "utf8")));
+  adminHtml = adminHtml.replace("</head>", `<script>window.SEGRETO = ${blob};</script>\n</head>`);
+  fs.copyFileSync(segreto, path.join(DIST, "admin", "segreto.json"));
+}
+fs.writeFileSync(path.join(DIST, "admin", "index.html"), adminHtml);
 
 const written = [];
 function write(name, html) {
