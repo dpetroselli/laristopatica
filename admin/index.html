@@ -136,6 +136,7 @@ textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
     <input type="password" id="token-input" placeholder="Password">
     <button class="btn" id="token-save">Entra</button>
     <span class="status" id="login-status"></span>
+    <span class="muted" style="font-size:0.7rem">versione admin 4</span>
   </div>
 </div>
 
@@ -209,8 +210,21 @@ const b64decodeUtf8 = (b64) => {
   return new TextDecoder().decode(bytes);
 };
 
+// fetch con timeout: se la rete non risponde entro 20s, errore chiaro invece di attesa infinita
+async function fetchT(url, opts = {}) {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), 20000);
+  try {
+    return await fetch(url, { ...opts, signal: ctrl.signal });
+  } catch (e) {
+    throw new Error(e.name === "AbortError" ? "GitHub non risponde (rete lenta o bloccata?)" : "connessione a GitHub fallita: " + e.message);
+  } finally {
+    clearTimeout(t);
+  }
+}
+
 async function ghGetFile() {
-  const r = await fetch(`https://api.github.com/repos/${REPO}/contents/content.json?ref=${BRANCH}`, {
+  const r = await fetchT(`https://api.github.com/repos/${REPO}/contents/content.json?ref=${BRANCH}`, {
     headers: getToken() ? ghHeaders() : { Accept: "application/vnd.github+json" },
     cache: "no-store",
   });
@@ -228,7 +242,7 @@ async function ghPutFile(json) {
     }
     fileSha = latest.sha;
   }
-  const r = await fetch(`https://api.github.com/repos/${REPO}/contents/content.json`, {
+  const r = await fetchT(`https://api.github.com/repos/${REPO}/contents/content.json`, {
     method: "PUT",
     headers: ghHeaders(),
     body: JSON.stringify({
@@ -246,7 +260,8 @@ async function ghPutFile(json) {
 }
 
 async function ghWhoAmI() {
-  const r = await fetch("https://api.github.com/user", { headers: ghHeaders() });
+  const r = await fetchT("https://api.github.com/user", { headers: ghHeaders() }).catch(() => null);
+  if (!r) return null;
   if (!r.ok) return null;
   return (await r.json()).login;
 }
@@ -577,7 +592,7 @@ $("#token-save").addEventListener("click", async () => {
   const input = $("#token-input").value.trim();
   const ls = $("#login-status");
   if (!input) { ls.textContent = "Scrivi la password nel campo qui sopra."; ls.className = "status err"; return; }
-  ls.textContent = "Verifica in corso…"; ls.className = "status";
+  ls.textContent = "Sblocco in corso…"; ls.className = "status";
   let token = input;
   if (secretBlob) {
     try {
@@ -589,6 +604,7 @@ $("#token-save").addEventListener("click", async () => {
     }
   }
   localStorage.setItem(tokenKey, token);
+  ls.textContent = "Password ok, mi collego a GitHub…";
   try {
     await loadContent();
     $("#login").hidden = true;
@@ -596,8 +612,8 @@ $("#token-save").addEventListener("click", async () => {
   } catch (e) {
     localStorage.removeItem(tokenKey);
     ls.textContent = secretBlob
-      ? "Password giusta, ma l'accesso a GitHub non funziona (chiave scaduta?). Avvisa chi gestisce il sito."
-      : "Chiave non valida o senza accesso al sito. Ricontrolla e riprova.";
+      ? `Password giusta, ma l'accesso a GitHub non riesce: ${e.message}`
+      : `Accesso non riuscito: ${e.message}`;
     ls.className = "status err";
   }
 });
