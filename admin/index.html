@@ -111,6 +111,8 @@ textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
   position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center;
   background: var(--bg); padding: 20px;
 }
+/* su Safari display:flex vince sull'attributo hidden: forziamo la chiusura */
+.login[hidden] { display: none !important; }
 .login-box {
   max-width: 460px; width: 100%; background: var(--panel); border: 1px solid var(--line);
   border-radius: 18px; padding: 34px; display: grid; gap: 14px; text-align: center;
@@ -136,7 +138,7 @@ textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
     <input type="password" id="token-input" placeholder="Password">
     <button class="btn" id="token-save">Entra</button>
     <span class="status" id="login-status"></span>
-    <span class="muted" style="font-size:0.7rem">versione admin 6</span>
+    <span class="muted" style="font-size:0.7rem">versione admin 7</span>
   </div>
 </div>
 
